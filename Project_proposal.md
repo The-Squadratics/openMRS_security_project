@@ -12,7 +12,7 @@ We selected `OpenMRS` for our project, specifically the `OpenMRS-core`.
 
 * An assumed/hypothetical operational environment (e.g., home, office, enterprise, bank, government, etc.) where the users will expect security functionality from the software in its intended use.
 
-Electronic medical records are standard in most western or developed countries but due to their cost and the technical overhead they entail they haven't been adopted	as much in developing nations, espcially in rural areas.  This project aims to change that by providing an open source solution that healthcare provides and facilities can adopt regardless of their financial means.
+Electronic medical records are standard in most western or developed countries but due to their cost and the technical overhead they entail they haven't been adopted	as much in developing nations, especially in rural areas.  This project aims to change that by providing an open source solution that healthcare providers and facilities can adopt regardless of their financial means.
 
 Our examination will focus on a the core use case of electronic medical records, managing patient records at a small facility. We will be examining this...
 
@@ -68,8 +68,13 @@ This project has provided a detailed, step-by-stem `Contributing` document that 
 
 ---
 
-* Link to your team GitHub repository that shows your internal project task assignments and collaborations to finish this task.
+### GitHub Repository
+
+The GitHub repository can be [found here](https://github.com/The-Squadratics/openMRS_security_project).
 
 ---
 
-* Github Project Boards
+### GitHub Project Board
+
+The project board can be [found here](https://github.com/The-Squadratics/openMRS_security_project/projects/1).
+
