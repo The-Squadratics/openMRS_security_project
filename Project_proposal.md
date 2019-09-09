@@ -33,9 +33,7 @@ This project is aimed at `resource constrained` hospital and health care provide
 
 ---
 
-* Discuss License, procedures for making contributions, and contributor agreements
-
-### License
+### License and Contributions
 
 This project uses the Mozilla Public License v2.0.  It contains the following [permissions, conditions, and limitations](https://choosealicense.com/licenses/mpl-2.0/).
 
@@ -56,7 +54,6 @@ This project uses the Mozilla Public License v2.0.  It contains the following [p
 * Trademark use (Does NOT grant trademark rights)
 * Warranty (Does NOT provide any warranty)
 
-----
 
 ### Contributing
 
@@ -64,7 +61,30 @@ This project has provided a detailed, step-by-stem `Contributing` document that 
 
 ----
 
-* Summary of security-related history for the software (E.g., known vulnerabilities, security-related engineering decisions, security feature additions/removal, etc. )
+### Summary of Security-related History
+
+The `openMRS` project was created in 2004.  Since then it has grown to include many different modules.  Our work will focus on the [`openMRS-core`](https://github.com/openmrs/openmrs-core) which doesn't have a complete or comprehensive history of the changes that were made.  It does however provide some information about the current development practices.  There is also a Wiki dedicated to the project as a whole which we used but not all of the information found there is necessarily relevant to the task at hand.
+
+#### Known Vulnerabilities
+
+The list of currently [known vulnerabilities](https://snyk.io/test/github/openmrs/openmrs-core?targetFile=api%2Fpom.xml) include the types of issues listed below.  Many of these are introduced through libraries and modules that the core software uses like Java Spring, Jackson Validator, Hibernate core, and MySQL.
+
+* Denial of Service
+* Deserialization of Untrusted Data
+ * As defined in [CWE-502](https://cwe.mitre.org/data/definitions/502.html)
+* XML External Entity Injection (XXE)
+* Access Restriction Bypass
+ * More information can be found in the [accompanying report](https://snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-31650)
+* Java Security Manager Bypass
+ * More information can be found in the [accompanying report](https://snyk.io/vuln/SNYK-JAVA-ORGHIBERNATE-30098)
+* Directory Traversal
+ * More information can be found in the [accompanying report](https://snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-32202)
+* Privilege Escalation
+ * More information can be found in the [accompanying report](https://snyk.io/vuln/SNYK-JAVA-MYSQL-174574)
+
+#### Feature Addition / Removal
+
+While the project does maintain comprehensive issue tracking though [JIRA](https://issues.openmrs.org/secure/Dashboard.jspa) and pull requests through [GitHub](https://github.com/openmrs/openmrs-core/pulls?utf8=✓&q=security), tracking specific security related changes is difficult.  By searching for relevant keywords we were able to find issues related to security issues that have been closed over the years.  For example, [Upgrade Apache Commons Collections](https://github.com/openmrs/openmrs-core/pull/1758).
 
 ---
 
