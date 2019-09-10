@@ -73,16 +73,16 @@ The list of currently [known vulnerabilities](https://snyk.io/test/github/openmr
 
 * Denial of Service
 * Deserialization of Untrusted Data
- * As defined in [CWE-502](https://cwe.mitre.org/data/definitions/502.html)
+  * As defined in [CWE-502](https://cwe.mitre.org/data/definitions/502.html)
 * XML External Entity Injection (XXE)
 * Access Restriction Bypass
- * More information can be found in the [accompanying report](https://snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-31650)
+  * More information can be found in the [accompanying report](https://snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-31650)
 * Java Security Manager Bypass
- * More information can be found in the [accompanying report](https://snyk.io/vuln/SNYK-JAVA-ORGHIBERNATE-30098)
+  * More information can be found in the [accompanying report](https://snyk.io/vuln/SNYK-JAVA-ORGHIBERNATE-30098)
 * Directory Traversal
- * More information can be found in the [accompanying report](https://snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-32202)
+  * More information can be found in the [accompanying report](https://snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-32202)
 * Privilege Escalation
- * More information can be found in the [accompanying report](https://snyk.io/vuln/SNYK-JAVA-MYSQL-174574)
+  * More information can be found in the [accompanying report](https://snyk.io/vuln/SNYK-JAVA-MYSQL-174574)
 
 There is also documentation that details general vulnerabilities that can be present in any [Java based application](https://wiki.openmrs.org/display/docs/Top+Vulnerabilities+in+Java+Web+Applications). They also have a few pages that discuss [security and encryption](https://wiki.openmrs.org/display/docs/Security+and+Encryption) but they are quite out of date.
 
