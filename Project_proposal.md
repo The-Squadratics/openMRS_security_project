@@ -17,9 +17,12 @@ Electronic medical records are standard in most western or developed countries b
 Our examination will focus on a the core use case of electronic medical records, managing patient records at a small facility. We will be examining this...
 
 ---
-
-* What are the security needs of users from this software in its intended threat environment ? If there are none or very few, then re-evaluate your selection.
-Develop a list of security features in the software. Again, if there are none or very few, then re-evaluate your choice.
+#### Security Needs of the Users
+## The security needs of the users of OpenMRS in its operational environment are:
+* Access Control including authorization, authentication, and access approval of the users to the software.
+* Data Security including prevention of accidental and malicious viewing, changing, or deleting of data.
+* Application Security including lack of bugs or flaws in coding logic that could result in future vulnerabilities leading to software breaches.
+* Network Security including confidence that the data will reach the intended recipient without unauthorized users being able to see or interact with the data or software.
 
 ---
 
