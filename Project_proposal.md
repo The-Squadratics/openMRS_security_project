@@ -63,7 +63,9 @@ This project has provided a detailed, step-by-stem `Contributing` document that 
 
 ### Summary of Security-related History
 
-The `openMRS` project was created in 2004.  Since then it has grown to include many different modules.  Our work will focus on the [`openMRS-core`](https://github.com/openmrs/openmrs-core) which doesn't have a complete or comprehensive history of the changes that were made.  It does however provide some information about the current development practices.  There is also a Wiki dedicated to the project as a whole which we used but not all of the information found there is necessarily relevant to the task at hand.
+The `openMRS` project was created in 2004.  Since then it has grown to include many different modules, all of which have their own code repositories.  Our work will focus on the [`openMRS-core`](https://github.com/openmrs/openmrs-core) which, unfortunately, doesn't have a complete or comprehensive history of the changes that were made.  It does however provide some information about the current development practices.  There is also a Wiki dedicated to the project as a whole which we will use, but not all of the information found there is necessarily relevant to our particular project.
+
+In addition, it's worth noting that the project as a whole doesn't seem to have a clearly defined security policy or stated goals.  In reviewing various meeting notes/minutes found on the [Wiki](https://wiki.openmrs.org/display/RES/2017-01-23+Project+Management+Meeting), the topic does come up and they are trying.  But like many open source projects, there currently isn't any single reference document.  Instead, security features are listed or detailed within the application documentation itself.  One example being the [User Access](https://wiki.openmrs.org/pages/viewpage.action?pageId=3346872) pages which describe how roles and privileges function and are set up.
 
 #### Known Vulnerabilities
 
@@ -81,6 +83,8 @@ The list of currently [known vulnerabilities](https://snyk.io/test/github/openmr
  * More information can be found in the [accompanying report](https://snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORK-32202)
 * Privilege Escalation
  * More information can be found in the [accompanying report](https://snyk.io/vuln/SNYK-JAVA-MYSQL-174574)
+
+There is also documentation that details general vulnerabilities that can be present in any [Java based application](https://wiki.openmrs.org/display/docs/Top+Vulnerabilities+in+Java+Web+Applications). They also have a few pages that discuss [security and encryption](https://wiki.openmrs.org/display/docs/Security+and+Encryption) but they are quite out of date.
 
 #### Feature Addition / Removal
 
