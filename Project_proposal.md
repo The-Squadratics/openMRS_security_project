@@ -10,11 +10,12 @@ We selected `OpenMRS` for our project, specifically the `OpenMRS-core`.
 
 ---
 
-* An assumed/hypothetical operational environment (e.g., home, office, enterprise, bank, government, etc.) where the users will expect security functionality from the software in its intended use.
+### An assumed/hypothetical operational environment (e.g., home, office, enterprise, bank, government, etc.) where the users will expect security functionality from the software in its intended use.
 
-Electronic medical records are standard in most western or developed countries but due to their cost and the technical overhead they entail they haven't been adopted	as much in developing nations, especially in rural areas.  This project aims to change that by providing an open source solution that healthcare providers and facilities can adopt regardless of their financial means.
+Electronic medical records are standard in most western or developed countries but due to their cost and the technical overhead they entail they haven't been adopted as much in developing nations, especially in rural areas. This project aims to change that by providing an open source solution that healthcare providers and facilities can adopt regardless of their financial means.
 
-Our examination will focus on a the core use case of electronic medical records, managing patient records at a small facility. We will be examining this...
+The environment we are assuming during our analysis will be the Clinic. Specifically, the location for the session will be Outpatient Clinic. The outpatient clinic table stores the information taken by the clinician during the treatment of the patient. Each row in the data table represents a visit from the patient. Our analysis will focus on the core use case of electronic medical records, managing patient records at a small facility, capturing vitals of the patients, configuring metadata, scheduling appointments, generating reports.
+
 
 ---
 ### Security Needs of the Users
@@ -26,9 +27,30 @@ Our examination will focus on a the core use case of electronic medical records,
 
 ---
 
-* Motivation for selecting this project
+### Develop a list of security features in the software
+Central concept dictionary: Definitions of all data (both questions and answers) are defined in a centralized dictionary, allowing for robust, coded data
+Security: User authentication
+Privilege-based access: User roles and permission system
+Patient repository: Creation and maintenance of patient data, including demographics, clinical observations, encounter data, orders, etc.
+Multiple identifiers per patient: A single patient may have multiple medical record numbers
+Data entry: With the FormEntry module, clients with InfoPath (included in Microsoft Office 2003 and later) can design and enter data using flexible, electronic forms. With the HTML FormEntry module, forms can be created with customized HTML and run directly within the web application.
+Data export: Data can be exported into a spreadsheet format for use in other tools (Excel, Access, etc.)
+Standards support: HL7 engine for data import
+Modular architecture: An OpenMRS Module can extend and add any type of functionality to the existing API and webapp.
+Patient workflows: An embedded patient workflow service allows patient to be put into programs (studies, treatment programs, etc.) and tracked through various states.
+Cohort management: The cohort builder allows you to create groups of patients for data exports, reporting, etc.
+Relationships: Relationships between any two people (patients, relatives, caretakers, etc.)
+Patient merging: Merging duplicate patients
+Localization / internationalization: Multiple language support and the possibility to extend to other languages with full UTF-8 support.
+Support for complex data: Radiology images, sound files, etc. can be stored as “complex” observations
+Reporting tools: Flexible reporting tools
+Person attributes: The attributes of a person can be extended to meet local needs
 
-This project is aimed at `resource constrained` hospital and health care providers. Those that don't typically have the ability to implement a commercial system to mange patient records.
+---
+
+### Motivation for selecting this project
+
+This project is aimed at resource constrained hospital and health care providers. Those that don't typically can implement a commercial system to manage patient records.  The motivation behind selecting this project was that it was an active project. With more than 300 contributors, more than 10.5k commits and 140 releases, this project often pick brain from the community to resolve the issues. Also, there are open issues and API as well as web vulnerabilities to work on. The OpenMRS is a software platform and improving the lives of underprivileged people worldwide through health care service and advocacy. We are sure that the contribution made to this project will make a real difference in the community and in the society as well. Additionally, the core language used is Java and has been used by the team members before so it will come in handy during the code analysis and review.
 
 ---
 
