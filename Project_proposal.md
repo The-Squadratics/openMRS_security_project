@@ -34,6 +34,27 @@ This project is aimed at `resource constrained` hospital and health care provide
 
 * Open source project description (What is it?, Contributors, Activity, Use, Popularity, Languages used, platform, documentation sources, etc.)
 
+### Project Description
+
+OpenMRS (stands for Open Medical Record System) was initially created in 2004 to create a database in a medical clinic in Kenya and has since grown to be in use on 6 continents. The collection of volunteers are from across the world and from many different backgrounds. ["The mission is to improve health care delvery in resource-constrained areas through the use of a scalable, open source medical record system."](https://openmrs.org/about/mission/) The overall goal of the mission is to help create a world where lower costs and higher capacity of the IT tools allows the community to further close the disparity between poor and wealthy countries by alleviating the work of medical professionals and provide them the tools to provide more beneficial results in health care.
+
+OpenMRS is a common platform used to build up medical data systems using few resources. The software is based on a conceptual database platform, so it is not dependent on data types, allowing for necessary customization. The client-server design allows for maximum availability and it stores all potentially relevant data so it is a concept dictionary at its core.
+
+* Contributors: 324 direct Github contributors
+* Activity: 
+   * 140 releases
+   * 10,803 commits (with the most recent commit coming less than 3 hours ago)
+   * 72 pending pull requests
+   * 43 branches
+   * 2,413 forks
+* Use and Popularity: OpenMRS is used in almost 50 deployments across 6 continents with uses spanning from research and development to     evaluation and clinical.
+* Languages Used: 96.2% Java, 2.9% SQLPL, less than 1% other languages
+* Documentation Sources: 
+   * OpenMRS Website: https://openmrs.org/
+   * OpenMRS demo: https://openmrs.org/demo/
+   * OpenMRS Github: https://github.com/openmrs/openmrs-core
+   * OpenMRS Wiki: https://wiki.openmrs.org/
+
 ---
 
 ### License and Contributions
