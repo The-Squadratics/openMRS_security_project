@@ -28,23 +28,23 @@ The environment we are assuming during our analysis will be the Clinic. Specific
 ---
 
 ### Develop a list of security features in the software
-Central concept dictionary: Definitions of all data (both questions and answers) are defined in a centralized dictionary, allowing for robust, coded data
-Security: User authentication
-Privilege-based access: User roles and permission system
-Patient repository: Creation and maintenance of patient data, including demographics, clinical observations, encounter data, orders, etc.
-Multiple identifiers per patient: A single patient may have multiple medical record numbers
-Data entry: With the FormEntry module, clients with InfoPath (included in Microsoft Office 2003 and later) can design and enter data using flexible, electronic forms. With the HTML FormEntry module, forms can be created with customized HTML and run directly within the web application.
-Data export: Data can be exported into a spreadsheet format for use in other tools (Excel, Access, etc.)
-Standards support: HL7 engine for data import
-Modular architecture: An OpenMRS Module can extend and add any type of functionality to the existing API and webapp.
-Patient workflows: An embedded patient workflow service allows patient to be put into programs (studies, treatment programs, etc.) and tracked through various states.
-Cohort management: The cohort builder allows you to create groups of patients for data exports, reporting, etc.
-Relationships: Relationships between any two people (patients, relatives, caretakers, etc.)
-Patient merging: Merging duplicate patients
-Localization / internationalization: Multiple language support and the possibility to extend to other languages with full UTF-8 support.
-Support for complex data: Radiology images, sound files, etc. can be stored as “complex” observations
-Reporting tools: Flexible reporting tools
-Person attributes: The attributes of a person can be extended to meet local needs
+* Central concept dictionary: Definitions of all data (both questions and answers) are defined in a centralized dictionary, allowing for robust, coded data
+* Security: User authentication
+* Privilege-based access: User roles and permission system
+* Patient repository: Creation and maintenance of patient data, including demographics, clinical observations, encounter data, orders, etc.
+* Multiple identifiers per patient: A single patient may have multiple medical record numbers
+* Data entry: With the FormEntry module, clients with InfoPath (included in Microsoft Office 2003 and later) can design and enter data using flexible, electronic forms. With the HTML FormEntry module, forms can be created with customized HTML and run directly within the web application.
+* Data export: Data can be exported into a spreadsheet format for use in other tools (Excel, Access, etc.)
+* Standards support: HL7 engine for data import
+* Modular architecture: An OpenMRS Module can extend and add any type of functionality to the existing API and webapp.
+* Patient workflows: An embedded patient workflow service allows patient to be put into programs (studies, treatment programs, etc.) and tracked through various states.
+* Cohort management: The cohort builder allows you to create groups of patients for data exports, reporting, etc.
+* Relationships: Relationships between any two people (patients, relatives, caretakers, etc.)
+* Patient merging: Merging duplicate patients
+* Localization / internationalization: Multiple language support and the possibility to extend to other languages with full UTF-8 support.
+* Support for complex data: Radiology images, sound files, etc. can be stored as “complex” observations
+* Reporting tools: Flexible reporting tools
+* Person attributes: The attributes of a person can be extended to meet local needs
 
 ---
 
