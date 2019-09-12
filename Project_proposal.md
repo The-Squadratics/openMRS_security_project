@@ -20,10 +20,10 @@ The environment we are assuming during our analysis will be the Clinic. Specific
 ---
 ### Security Needs of the Users
 #### The security needs of the users of OpenMRS in its operational environment are:
-* Access Control including authorization, authentication, and access approval of the users to the software.
-* Data Security including prevention of accidental and malicious viewing, changing, or deleting of data.
-* Application Security including lack of bugs or flaws in coding logic that could result in future vulnerabilities leading to software breaches.
-* Network Security including confidence that the data will reach the intended recipient without unauthorized users being able to see or interact with the data or software.
+* Access Control including authorization, authentication, and access approval of the users to the software to ensure confidentiality of   data.
+* Logs including access and change logs of users interacting with the software to ensure non-repudiation of data.
+* Availability during operating hours and reasonable resumption of service after downtimes with no loss of data.
+* Data Security including prevention of accidental and malicious viewing, changing, or deleting of data and data backups to ensure data   integrity.
 
 ---
 
