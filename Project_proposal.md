@@ -54,8 +54,6 @@ This project is aimed at resource constrained hospital and health care providers
 
 ---
 
-* Open source project description (What is it?, Contributors, Activity, Use, Popularity, Languages used, platform, documentation sources, etc.)
-
 ### Project Description
 
 OpenMRS (stands for Open Medical Record System) was initially created in 2004 to create a database in a medical clinic in Kenya and has since grown to be in use on 6 continents. The collection of volunteers are from across the world and from many different backgrounds. ["The mission is to improve health care delvery in resource-constrained areas through the use of a scalable, open source medical record system."](https://openmrs.org/about/mission/) The overall goal of the mission is to help create a world where lower costs and higher capacity of the IT tools allows the community to further close the disparity between poor and wealthy countries by alleviating the work of medical professionals and provide them the tools to provide more beneficial results in health care.
