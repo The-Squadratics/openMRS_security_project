@@ -54,7 +54,6 @@ This project is aimed at resource constrained hospital and health care providers
 
 ---
 
-* Open source project description (What is it?, Contributors, Activity, Use, Popularity, Languages used, platform, documentation sources, etc.)
 
 ### Project Description
 
