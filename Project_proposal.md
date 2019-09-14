@@ -2,9 +2,6 @@
 ### CYBR 8430 - Project Proposal
 ### OpenMRS - A patent based
 
-#### Project Proposal: 2-3 page markdown document that describes the following:
-
-* An open-source software project your team has chosen. From here on, it will be referred to as “software”.
 
 We selected `OpenMRS` for our project, specifically the `OpenMRS-core`.
 
