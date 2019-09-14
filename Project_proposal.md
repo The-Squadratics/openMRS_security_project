@@ -4,8 +4,8 @@
 
 
 After looking at a number of different pojects like:
-[Hapi.js](https://github.com/hapijs/hapi)which is a javascript framework for building webapplication and other services.
-[Syslog-ng](https://github.com/balabit/syslog-ng)which is a open source log management project built around a system deamon[Syslog-ng](https://github.com/balabit/syslog-ng) etc.
+[Hapi.js](https://github.com/hapijs/hapi) which is a javascript framework for building webapplication and other services.
+[Syslog-ng](https://github.com/balabit/syslog-ng) which is a open source log management project built around a system deamon etc.
 
 We decided to go with `OpenMRS` for our project, specifically the `OpenMRS-core` which is a common platform that is use to build medical data system.
 
