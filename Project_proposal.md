@@ -1,6 +1,6 @@
 ### The Squadratics
 ### CYBR 8430 - Project Proposal
-### OpenMRS - A patent based
+### OpenMRS - A patent-based medical record system
 
 
 After looking at a number of different pojects like:
