@@ -1,5 +1,3 @@
-### The Squadratics
-### CYBR 8430 - Requirements for Software Security Engineering
 ### OpenMRS - A patent-based medical record system
 
 
@@ -8,6 +6,45 @@ After looking at a number of different OSS projects we decided to assess `OpenMR
 ---
 
 ### Identify five essential data flows (source-transformations-sink) through the software. Provide use-cases diagrams related to each of these data flows.
+
+### File Upload Data Fow (1 / 5)
+
+#### Use Case
+
+Users of OpenMRS want to be able to access patient information and add additional records easily and securely. There is not only an expectation that the files uploaded will be safe but a regulatory requirement that the information be protected.
+
+One of the stated benefits of medical record systems is the portability of patient data.  In the past, medical records were often cumbersome to maintain and difficult to share between doctors and clinics.  Moving to a system that allows for quick access and easier sharing is certainly helpful.  But being able to move records from one system to another can still pose challenges.  Especially since allowing uploading of data into the system can expose it to bad actors with malicious intent.
+
+#### Misuse Case
+
+An attacker that knows the system is able to accept uploaded files could craft an attack that will grant them access to the system as a whole, potentially exposing not only patient medical data but possibly billing, insurance, and other financial information.
+
+The use/misuse diagram details the following scenario.
+
+```
+Clinic Staff needs the ability to
+ 1. Uploads Patient Files
+Attacker crafts a malicious file to
+ 1. Upload reverse shell
+Clinic Staff
+ 2. Implements white listing based on file extension
+Attacker
+ 2. Adds duplicate file extension
+Clinic Staff
+ 3. Implements file type detector
+Attacker
+ 3. Adds valid file type header before malicious code
+Clinic Staff
+ 4. Removes upload directory execution privileges
+Attacker
+ 4. Gives up (unlikely but still...)
+```
+![File Upload Diagram](https://user-images.githubusercontent.com/5983684/65918103-604af400-e3c8-11e9-988d-0f867d465b10.png)
+[LucidChart - File Upload](https://www.lucidchart.com/invitations/accept/11f8124a-1a0c-45ff-9b48-6b94b72960f6)
+
+#### Security Requirements
+
+Work in progress
 
 ---
 
