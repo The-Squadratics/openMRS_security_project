@@ -39,7 +39,9 @@ Clinic Staff
 Attacker
  4. Gives up (unlikely but still...)
 ```
-![File Upload Diagram](https://user-images.githubusercontent.com/5983684/65918103-604af400-e3c8-11e9-988d-0f867d465b10.png)
+
+#### Use/Misuse Diagram
+![File Upload Diagram](https://user-images.githubusercontent.com/5983684/65987120-bd03e880-e474-11e9-9c7b-f653081343c5.png)
 [LucidChart - File Upload](https://www.lucidchart.com/invitations/accept/11f8124a-1a0c-45ff-9b48-6b94b72960f6)
 
 #### Security Requirements
@@ -52,7 +54,7 @@ Work in progress
 
 #### Use Case
 
-<<content here>>
+[content here]
 
 ---
 
@@ -60,7 +62,7 @@ Work in progress
 
 #### Use Case
 
-<<content here>>
+[content here]
 
 ---
 
@@ -68,7 +70,7 @@ Work in progress
 
 #### Use Case
 
-<<content here>>
+[content here]
 
 ---
 
@@ -76,7 +78,7 @@ Work in progress
 
 #### Use Case
 
-<<content here>>
+[content here]
 
 ---
 
