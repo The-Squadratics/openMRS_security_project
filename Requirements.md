@@ -19,6 +19,8 @@ One of the stated benefits of medical record systems is the portability of patie
 
 An attacker that knows the system is able to accept uploaded files could craft an attack that will grant them access to the system as a whole, potentially exposing not only patient medical data but possibly billing, insurance, and other financial information.
 
+Given our scenario, a likely attack could originate from within the clinic itself.  In this case, a disgruntled admin looking to exfiltrate sensitive patient information for personal gain.
+
 The use/misuse diagram details the following scenario.
 
 ```
@@ -41,7 +43,7 @@ Attacker
 ```
 
 #### Use/Misuse Diagram
-![File Upload Diagram](https://user-images.githubusercontent.com/5983684/65987120-bd03e880-e474-11e9-9c7b-f653081343c5.png)
+![File Upload Diagram](https://user-images.githubusercontent.com/5983684/65993215-4ec52300-e480-11e9-97a9-7bc82eccf46d.png)
 [LucidChart - File Upload](https://www.lucidchart.com/invitations/accept/11f8124a-1a0c-45ff-9b48-6b94b72960f6)
 
 #### Security Requirements
