@@ -55,6 +55,8 @@ Work in progress
 ### Assess the alignment of security requirements with advertised features of the software.  Incorporate project documentation and observations about the codebase as evidence to support the conclusions reached.
 
 ---
+Patrick asks, should I upload my section here? Create a new file? I want to make sure I am not messing up the formatting.
+---
 
 ### Provide a summary of the `OpenMRS` project documentation for security-related configuration and installation issues.
 
