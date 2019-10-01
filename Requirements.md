@@ -7,7 +7,7 @@ After looking at a number of different OSS projects we decided to assess `OpenMR
 
 ### Identify five essential data flows (source-transformations-sink) through the software. Provide use-cases diagrams related to each of these data flows.
 
-### File Upload Data Fow (1 / 5)
+### File Upload - Data Flow (1 / 5)
 
 #### Use Case
 
@@ -29,7 +29,7 @@ Attacker crafts a malicious file to
 Clinic Staff
  2. Implements white listing based on file extension
 Attacker
- 2. Adds duplicate file extension
+ 2. Adds duplicate file extension (e.g. file.txt.jpg)
 Clinic Staff
  3. Implements file type detector
 Attacker
@@ -45,6 +45,38 @@ Attacker
 #### Security Requirements
 
 Work in progress
+
+---
+
+### Patrick Case - Data Flow (2 / 5)
+
+#### Use Case
+
+<<content here>>
+
+---
+
+### MJ Case - Data Flow (3 / 5)
+
+#### Use Case
+
+<<content here>>
+
+---
+
+### Jeson Case - Data Flow (4 / 5)
+
+#### Use Case
+
+<<content here>>
+
+---
+
+### Group Case - Data Flow (5 / 5)
+
+#### Use Case
+
+<<content here>>
 
 ---
 
