@@ -19,25 +19,25 @@ One of the stated benefits of medical record systems is the portability of patie
 
 An attacker that knows the system is able to accept uploaded files could craft an attack that will grant them access to the system as a whole, potentially exposing not only patient medical data but possibly billing, insurance, and other financial information.
 
-Given our scenario, a likely attack could originate from within the clinic itself.  In this case, a disgruntled admin looking to exfiltrate sensitive patient information for personal gain.
+Given our scenario, a likely attack could originate from within the clinic itself.  In this case we have identified Doug, a disgruntled system admin.  Doug is dissatisfied with their salary and has decided to exfiltrate sensitive patient information for personal gain.
 
 The use/misuse diagram details the following scenario.
 
 ```
-Clinic Staff needs the ability to
- 1. Uploads Patient Files
-Attacker crafts a malicious file to
+The system enables
+ 1. Upload Patient Files
+Doug crafts a malicious file to
  1. Upload reverse shell
-Clinic Staff
- 2. Implements white listing based on file extension
-Attacker
- 2. Adds duplicate file extension (e.g. file.txt.jpg)
-Clinic Staff
- 3. Implements file type detector
-Attacker
+The system should be able to
+ 2. Whitelist files based on the file extension
+Doug
+ 2. Adds duplicate file extension (file.txt.jpg)
+To mitigate attacks contained in specific file types
+ 3. File type detector
+Doug
  3. Adds valid file type header before malicious code
-Clinic Staff
- 4. Removes upload directory execution privileges
+The system
+ 4. Upload directory has no execution privileges
 Attacker
  4. Gives up (unlikely but still...)
 ```
@@ -48,7 +48,11 @@ Attacker
 
 #### Security Requirements
 
-Work in progress
+Clinicians and other users of the system have to be able to add new information, whether that's patient records or other clinic data.  They have an expectation that this functionality is safe and doesn't enable the system to be compromised by bad actors.
+
+The use and misuse case detailed above documents a common scenario within the clinic.  The uploading of new data into the system.  The system provides this functionality but doesn't incorporate all of the potential mitigations we listed.  It does limit the types of files able to uploaded to `.txt` files but that appears to be it.
+
+Instead, given the modular nature of the software, any remaining mitigations are expected to be handled by other systems.  In this case, the server side software, Apache. The `FileUpload` module does have options related to whitelisting and if properly updated, shouldn't execute files with double extensions.  Setting up and defining the privilege of specific directories on the server is also outside the scope of the core software.
 
 ---
 
