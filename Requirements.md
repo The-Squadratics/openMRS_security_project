@@ -88,7 +88,7 @@ Work in progress
 #### Use Case
 
 [content here]
-
+https://www.lucidchart.com/publicSegments/view/bde21596-f97c-4f72-a3b3-87628f58ca46/image.png
 ---
 
 ### Group Case - Data Flow (5 / 5)
