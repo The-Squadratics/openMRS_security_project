@@ -117,11 +117,13 @@ Work in progress
 
 ### Provide a summary of the `OpenMRS` project documentation for security-related configuration and installation issues.
 
-The security-related configuration documentation provided for the OpenMRS project is not centrally located but spread out over numerous documents on the OpenMRS wiki.
+The security-related configuration documentation provided for the OpenMRS project is not centrally located but spread out over numerous documents on the OpenMRS wiki. They do provide an overview of how the system is intended to be [set up and run](https://wiki.openmrs.org/display/docs/Installing+OpenMRS), but since every installation will likely differ, possibly quite dramatically, it's hard to cover all the different situations in the documentation.
 
-The project does provide...
+The project does provide an installation "wizard" to help folks get the basics installed.  The wiki also has more technical information about to how do a basic installation and some of the issues that folks should be mindful of.
 
-Some examples of the documentation provided are listed below.
+The main issues, as has been mentioned before, often come up in the environment in which the core OpenMRS software is running and not necessarily in the software itself.  The wiki goes into detail about setup of this environment because it encompasses things like the host OS, Java, Apache / Tomcat, MySQL and so on.  These are all important aspects and each has their own potential issues.  The [wiki goes into detail](https://wiki.openmrs.org/display/docs/Printable+Installation+Guide) about what to look out for such as suggestions on software versions to use.
+
+Some examples of other documentation provided by the project are listed below.
 
 * [Technical Overview](https://wiki.openmrs.org/display/docs/Technical+Overview)
 
