@@ -97,8 +97,9 @@ Work in progress
 
 [content here]
 
-
+#### Use/Misuse Diagram
 ![Capture](https://user-images.githubusercontent.com/41209887/66078918-98694880-e528-11e9-9926-61e213bae0c7.JPG)
+[LucidChart - File Upload](https://www.lucidchart.com/invitations/accept/db478c4c-0ea5-4b4a-8724-e7b68c991c51)
 ---
 
 ### Group Case - Data Flow (5 / 5)
