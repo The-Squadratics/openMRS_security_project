@@ -54,6 +54,10 @@ The use and misuse case detailed above documents a common scenario within the cl
 
 Instead, given the modular nature of the software, any remaining mitigations are expected to be handled by other systems.  In this case, the server side software, Apache. The `FileUpload` module does have options related to whitelisting and if properly updated, shouldn't execute files with double extensions.  Setting up and defining the privilege of specific directories on the server is also outside the scope of the core software.
 
+Since most of the mitigations detailed above are handled outside the system there aren't many links to provide. An example from the [StartupErrorFilter.java](https://github.com/openmrs/openmrs-core/blob/4a0feb8da351088f25fdc4e6d324a1f277aa3410/web/src/main/java/org/openmrs/web/filter/startuperror/StartupErrorFilter.java) file does show the Apache modules that are expected when installing and running the system.
+
+When examining this particular module, Apache does provide [documentation](https://commons.apache.org/proper/commons-fileupload/apidocs/org/apache/commons/fileupload/FileUpload.html) on how it could be used, including mitigations like the ones we outlined above.
+
 ---
 
 ### Patrick Case - Data Flow (2 / 5)
