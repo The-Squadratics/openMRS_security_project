@@ -66,7 +66,7 @@ Clinic Staff needs the ability to
 ```
 
 #### Use/Misuse Diagram
-![File Upload Diagram]()
+![File Upload Diagram](https://github.com/patricklind5ay/hello-world/blob/master/ReportGenerationMisuseCaseDiagram.PNG?raw=true)
 [LucidChart - File Upload](https://www.lucidchart.com/invitations/accept/4e36ef7b-1742-4650-87f3-20a76443e20f)
 
 #### Security Requirements
