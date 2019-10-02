@@ -43,7 +43,7 @@ Attacker
 ```
 
 #### Use/Misuse Diagram
-![File Upload Diagram](https://user-images.githubusercontent.com/5983684/65993215-4ec52300-e480-11e9-97a9-7bc82eccf46d.png)
+![File Upload Diagram](https://user-images.githubusercontent.com/5983684/66074945-f9554880-e549-11e9-975b-b7c1c1ed6dad.png)
 [LucidChart - File Upload](https://www.lucidchart.com/invitations/accept/11f8124a-1a0c-45ff-9b48-6b94b72960f6)
 
 #### Security Requirements
