@@ -97,6 +97,8 @@ Work in progress
 
 [content here]
 
+
+![Capture](https://user-images.githubusercontent.com/41209887/66078739-36a8de80-e528-11e9-878d-a248b57da422.JPG)
 ---
 
 ### Group Case - Data Flow (5 / 5)
