@@ -101,23 +101,24 @@ Work in progress
 
 An attacker who knows that the system will allow to access patient information as well as other medical record could use any mechanism of attack which will allow them grant access to the system.
 
+The use/misuse diagram details the following scenario.
 ```
 Staff needs an authorization to 
- 1)	Login to the application 
+ 1. Login to the application 
 Attacker
- 1)	Abuses the authentication 
+ 1.	Abuses the authentication 
 Staff
- 2)	Validates password complexity and use at least certain number of characters in the password
+ 2.	Validates password complexity and use at least certain number of characters in the password
 Attacker
- 2)	Inject bad data or use successful experiments to impersonate an authorized user
+ 2.	Inject bad data or use successful experiments to impersonate an authorized user
 Staff
- 3)	Can implement encrypting or signing the season ID which can protect the ID if intercepted 
+ 3.	Can implement encrypting or signing the season ID which can protect the ID if intercepted 
 Attacker 
- 3)	Impersonate a legitimate user and can get access to the system by abusing an authentication protocol susceptible to reflection attack in order to defeat it.
+ 3.	Impersonate a legitimate user and can get access to the system by abusing an authentication protocol susceptible to reflection attack in order to defeat it.
 Staff
- 4)	Use HMAC to hash the response from the server or introduce a random nonce with each new connection which will ensure that the  attacker cannot employ two connections to attack the authentication protocol
+ 4.	Use HMAC to hash the response from the server or introduce a random nonce with each new connection which will ensure that the  attacker cannot employ two connections to attack the authentication protocol
 Attacker 
- 4)	Give Up
+ 4.	Give Up
 ```
 
 #### Use/Misuse Diagram
