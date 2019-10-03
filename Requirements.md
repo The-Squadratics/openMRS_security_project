@@ -7,7 +7,7 @@ After looking at a number of different OSS projects we decided to assess `OpenMR
 
 ### Identify five essential data flows (source-transformations-sink) through the software. Provide use-cases diagrams related to each of these data flows.
 
-### File Upload - Data Flow (1 / 5)
+### Clinician - File Upload Data Flow (1 / 5)
 
 #### Use Case
 
@@ -60,7 +60,7 @@ When examining this particular module, Apache does provide [documentation](https
 
 ---
 
-### Patrick Case - Data Flow (2 / 5)
+### Clinic Admin - Database Data Flow (2 / 5)
 
 #### Use Case
 
@@ -83,7 +83,7 @@ Work in progress
 
 ---
 
-### Form Data by FD Clerk - Data Flow (3 / 5)
+### Front Desk Clerk - Form Data Flow (3 / 5)
 
 #### Use Case
 
@@ -93,14 +93,14 @@ Work in progress
 
 
 #### Use/Misuse Diagram
-![Capture](https://user-images.githubusercontent.com/46797572/66089608-ac6f7300-e545-11e9-97d7-c4d5425ac16e.jpeg)
+![Patient Registration Misuse Case](https://user-images.githubusercontent.com/46797572/66089608-ac6f7300-e545-11e9-97d7-c4d5425ac16e.jpeg)
 [LucidChart - File Upload](https://www.lucidchart.com/documents/edit/90a38756-7675-49f2-81f1-2f44c61ca1bb/0_0)
 
 #### Security Requirements
 
 ---
 
-### Jeson Case - Data Flow (4 / 5)
+### Doctor/Nurse - Browser Data Flow (4 / 5)
 
 #### Use Case
 
@@ -145,7 +145,7 @@ The use as well as misuse cases which are listed above in the document are the c
 
 
 
-### Group Case - Data Flow (5 / 5)
+### System Admin - Data Flow (5 / 5)
 
 #### Use Case
 
@@ -153,21 +153,21 @@ The use as well as misuse cases which are listed above in the document are the c
 
 #### Misuse Case
 
+[content here]
+
 ---
 
 #### Use/Misuse Diagram
 ![SystemAdmin Misuse Case](https://user-images.githubusercontent.com/46797572/66096445-98853a80-e560-11e9-9729-5b26675a05e7.jpeg)
 [LucidChart - File Upload](https://www.lucidchart.com/documents/edit/879f5a52-9aca-450a-bfda-e4d9656520a1/0_0)
 
-### Derive security requirements for each of the use cases using misuse case diagrams. 
+#### Security Requirements
+
+[content here]
 
 ---
 
-### Assess the alignment of security requirements with advertised features of the software.  Incorporate project documentation and observations about the codebase as evidence to support the conclusions reached.
-
----
-
-### Provide a summary of the `OpenMRS` project documentation for security-related configuration and installation issues.
+### Summary of the `OpenMRS` project documentation for security-related configuration and installation issues.
 
 The security-related configuration documentation provided for the OpenMRS project is not centrally located but spread out over numerous documents on the OpenMRS wiki. They do provide an overview of how the system is intended to be [set up and run](https://wiki.openmrs.org/display/docs/Installing+OpenMRS), but since every installation will likely differ, possibly quite dramatically, it's hard to cover all the different situations in the documentation.
 
