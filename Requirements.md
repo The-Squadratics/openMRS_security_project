@@ -191,12 +191,9 @@ User of openMRS espically the System admin wants to manage roles and modules in 
 Due to the growth and the development of the technology these days where everything is done online in the system. The role of the system admin plays the major in the system. He/she is responsible to manage and support the system. This system has made easier to doctors/ nurses or other staffs to access the patient information as well as other records. In doing so, system administration plays the vital role making all these things work properly. 
 
 
-
 #### Misuse Case
 
 [content here]
-
----
 
 #### Use/Misuse Diagram
 ![SystemAdmin Misuse Case](https://user-images.githubusercontent.com/46797572/66096445-98853a80-e560-11e9-9729-5b26675a05e7.jpeg)
