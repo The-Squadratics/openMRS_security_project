@@ -144,6 +144,14 @@ The use/misuse diagram details the following scenario.
 
 #### Security Requirements
 
+The patient records are confidential and prevention of unauthorized access to the patient’s current or past medical record is the priority of the software. The attackers can perform parameter injection to gain unauthorized access to the confidential information of the patient. The attacker can inject format string during patient registration by input invalid characters or running a small script which would then allow the attacker to manipulate the data in the system. The attacker can also do buffer overflow attack by input injection if the system doesn.t have proper bound checking on buffer operations. Using a browser or automated tool, an attacker can follow public links of the website. Then record each entry into the header of the HTML and if the system doesn’t have proper validation then the attacker gains access to data by hidden headers which are not usually checked for validation.
+
+OpenMRS has several functions to filter untrusted user input and prevent XSS.
+
+* String encodeHtmlContent(String input) - This function allows untrusted data to be safely displayed in HTML. This is mainly achieved by converting < and > symbols to &#60; and &#62; respectively. This kind of filtering will prevent XSS with script tag injection.
+* String encodeHtmlAttribute(String input) - This function allows untrusted data to be safely displayed in HTML attributes. This is mainly achieved by converting " and ' symbols to &#34; and &#39; respectively. This kind of filtering will prevent XSS with HTML attribute injection.
+* String encodeJavaScript(String input) - This function allows untrusted data to be safely displayed in dynamically generated JavaScript. This is mainly achieved by using JavaScript backslash-escaping. This kind of filtering will prevent XSS with JavaScript injection.
+
 ---
 
 ### Doctor/Nurse - Browser Data Flow (4 / 5)
@@ -192,7 +200,6 @@ The use as well as misuse cases which are listed above in the document are the c
 HTTP Apache has provided the module [mod_auth_form](https://httpd.apache.org/docs/2.4/mod/mod_auth_form.html) and has shown the basic example of the configuration. This auth_form also includes the mitigation we have included in the above documents. so this can be the good example for the login form.
 
 
-
 ### System Admin - Data Flow (5 / 5)
 
 #### Use Case
@@ -201,18 +208,9 @@ User of openMRS espically the System admin wants to manage roles and modules in 
 
 Due to the growth and the development of the technology these days where everything is done online in the system. The role of the system admin plays the major in the system. He/she is responsible to manage and support the system. This system has made easier to doctors/ nurses or other staffs to access the patient information as well as other records. In doing so, system administration plays the vital role making all these things work properly. 
 
-
-#### Misuse Case
-
-[content here]
-
 #### Use/Misuse Diagram
 ![SystemAdmin Misuse Case](https://user-images.githubusercontent.com/46797572/66096445-98853a80-e560-11e9-9729-5b26675a05e7.jpeg)
 [LucidChart - File Upload](https://www.lucidchart.com/documents/edit/879f5a52-9aca-450a-bfda-e4d9656520a1/0_0)
-
-#### Security Requirements
-
-[content here]
 
 ---
 
