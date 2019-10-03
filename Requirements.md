@@ -93,7 +93,7 @@ Work in progress
 
 
 #### Use/Misuse Diagram
-![Patient Registration Misuse Case](https://user-images.githubusercontent.com/46797572/66098122-fcaafd00-e566-11e9-9c25-8b4a01dadea3.jpeg)
+![Patient Registration Misuse Case](https://user-images.githubusercontent.com/46797572/66098249-77741800-e567-11e9-8a87-4c3520e15901.jpeg)
 [LucidChart - File Upload](https://www.lucidchart.com/documents/edit/90a38756-7675-49f2-81f1-2f44c61ca1bb/0_0)
 
 #### Security Requirements
