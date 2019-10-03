@@ -93,7 +93,7 @@ Work in progress
 
 
 #### Use/Misuse Diagram
-![Patient Registration Misuse Case](https://user-images.githubusercontent.com/46797572/66098249-77741800-e567-11e9-8a87-4c3520e15901.jpeg)
+![Patient Registration Misuse Case](https://user-images.githubusercontent.com/46797572/66089608-ac6f7300-e545-11e9-97d7-c4d5425ac16e.jpeg)
 [LucidChart - File Upload](https://www.lucidchart.com/documents/edit/90a38756-7675-49f2-81f1-2f44c61ca1bb/0_0)
 
 #### Security Requirements
@@ -151,7 +151,11 @@ HTTP Apache has provided the module [mod_auth_form](https://httpd.apache.org/doc
 
 #### Use Case
 
-[content here]
+User of openMRS espically the System admin wants to manage roles and modules in the system. In doing so he/she does also wants the roles and modules be safe from the outside source and be protected. 
+
+Due to the growth and the development of the technology these days where everything is done online in the system. The role of the system admin plays the major in the system. He/she is responsible to manage and support the system. This system has made easier to doctors/ nurses or other staffs to access the patient information as well as other records. In doing so, system administration plays the vital role making all these things work properly. 
+
+
 
 #### Misuse Case
 
