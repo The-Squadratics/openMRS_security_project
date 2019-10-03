@@ -118,11 +118,11 @@ The use/misuse diagram details the following scenario.
 Staff needs an authorization to 
  1. Login to the application 
 Attacker
- 1. Abuses the authentication 
+ 1. Abuses the authentication using authentication abuse 
 Staff
  2. Validates password complexity and use at least certain number of characters in the password
 Attacker
- 2. Inject bad data or use successful experiments to impersonate an authorized user
+ 2. Inject bad data or use successful experiments to impersonate an authorized user using exploitation of trusted credentials
 Staff
  3. Can implement encrypting or signing the season ID which can protect the ID if intercepted 
 Attacker 
