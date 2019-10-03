@@ -122,10 +122,21 @@ OpenMRS practices a Code Review Checklist which includes a section on Thread Saf
 
 #### Use Case
 
-[content here]
+The first and foremost thing a patient does when he/she comes into the clinic is to get registered. The front desk clerk is usually the one who enters the data of the patient into the system. The clerk verifies the identity and forms such as insurance papers, previous medical records etc. while registering a patient. It is mandatory that the data entered should be correct and accurate. Entering correct data ensures that the patient is treated rightfully. With the help of OpenMRS, filling forms has become easier. Also, the clerk uses the software to perform other tasks such as scheduling appointments, manage services etc. The main objective of form data flow is to enter correct data in the fields after validation.
 
 #### Misuse Case
 
+An attacker can take advantage to manipulate form data and have access to the confidential records of the patients if the input validation is not done properly. The attack can happen from inside the clinic by getting access of the system. The attacker may do run a script in the form placeholder or remotely attack by cross side scripting through HTTP or headers. 
+
+The use/misuse diagram details the following scenario.
+
+* The front desk clerk, Jane Doe, registers a patient by getting all their details. The attacker, Mr. Robot, performs a parameter injection attack with format string injection and tries to get the confidential records of the patients. 
+
+* The software has the ability of strong input validation through which it can detect any unwanted script or character, thus mitigating the format string injection.
+
+* In order to gain access to the data, attacker tries to overflow the data with buffer overflow which threatens the input validation. The system also has automatic bound checking feature which results into prevention from buffer overflow attack.
+
+* The clerk also manages and schedules appointments which is threaten by stored cross side scripting attack through headers to manipulate the appointments by the attacker. The system implementing session tokens prevents this kind of attacks.
 
 #### Use/Misuse Diagram
 ![Patient Registration Misuse Case](https://user-images.githubusercontent.com/46797572/66098249-77741800-e567-11e9-8a87-4c3520e15901.jpeg)
