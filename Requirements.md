@@ -139,7 +139,10 @@ Attacker
 
 #### Security Requirements
 
-The most important requirement for the system is its security. 
+The most important requirement for the system is its security. The user of the application wants to login to their system. So they do want their login information be protected and be kept away from the bad actors.
+
+The use as well as misuse cases which are listed above in the document are the common scenario within the system. The login feature for the given application. It does provide the functionality, but this system doesn’t include all the mitigation we listen above in the documentation. It doesn’t have the system of encrypting the session id, use of HMAC to hash response etc. But to some extent it does has the functionality like validating the password complexity and use of the minimum certain character length to the password. Also, most of the mitigations detailed above in the document are handled outside the system there aren’t links to be provided. Moreover, it does have the feature of authentication by checking the existed user in the database system. 
+
 
 
 ### Group Case - Data Flow (5 / 5)
