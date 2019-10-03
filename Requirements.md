@@ -64,13 +64,31 @@ When examining this particular module, Apache does provide [documentation](https
 
 #### Use Case
 
+Linda Brown is the clinic administrator and she needs to order more medical supplies for the clinic. It is critical to both the Nurses and Doctors as well as the patients to have enough supplies to be able to properly treat everyone who comes through the doors of the clinic. From her office at the back of the clinic, she logs into the OpenMRS console and clicks on the "Reports" module. Linda needs to know how many patients were admitted to the clinic and what their diagnoses were to get a better idea of what kind and how many medical supplies to order. Based on these results, Linda can preemptively order supplies to meet the needs of the clinic in the coming months.
 
 #### Misuse Case
 
+An attacker that knows the system is able view network traffic and analyze the traffice to determine the ideal time to enact a deadlock attack that would prevent the generation of reports from the database.
+
+The most likely scenarios would come from outside the clinic. In this case, Kyle Swarley is a former, potential patient that was asked to leave because of his unruly behavior and refusal to follow rules after being repeatedly asked.
 
 ```
-Clinic Staff needs the ability to
-
+The system enables
+ 1. Generate Report from Database
+Kyle Swarley
+ 1. Eavesdrops on the network
+The system should be able to
+ 2. Encrypt network traffic
+Kyle Swarley
+ 2. Analyzes the encrypted network traffic
+To warn users and prevent analyzed traffic
+ 3. Enpoint antivirus implemented
+ 3. Software logs monitored
+Kyle Swarley
+ 4. Forces a deadlock of the program
+System prevents a deadlock with 
+ 4. Consistent ordering of locking
+ 
 ```
 
 #### Use/Misuse Diagram
@@ -79,7 +97,24 @@ Clinic Staff needs the ability to
 
 #### Security Requirements
 
-Work in progress
+The use and misuse case detailed above documents a common scenario within the clinic.  The generation of reports.  The system provides this functionality but doesn't incorporate all of the potential mitigations we listed.  The system does afford the use of encryption, logging, and practices code review with best practices that include consistent ordering of thread locking.
+
+The system does not implement endpoint protection on the host computer that it is running on. That kind of antivirus protection would be up to Windows defender or an appropriate third party product for the clinic's situation.
+
+Encryption: https://wiki.openmrs.org/display/docs/Security+and+Encryption
+
+OpenMRS offers single direction encryption, hash validation, as well as two way encryption which is SHA-512 by default.
+
+Logging: https://wiki.openmrs.org/display/docs/Log+Manager+Module
+         https://wiki.openmrs.org/display/docs/Usage+Statistics+Module
+         https://wiki.openmrs.org/display/docs/Error+Logging+Module
+         https://wiki.openmrs.org/display/projects/Logging+Errors+to+the+Database
+       
+OpenMRS offers many modules available that can keep track of any kind of system data, even going so far as to have a module that will allow the viewing of logs at runtime.
+
+Deadlock Prevention: https://wiki.openmrs.org/display/docs/Code+Review+Checklist
+
+OpenMRS practices a Code Review Checklist which includes a section on Thread Safeness which details how to avoid deadlocks by keeping the threads synchronized when writing to them.
 
 ---
 
