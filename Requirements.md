@@ -64,13 +64,30 @@ When examining this particular module, Apache does provide [documentation](https
 
 #### Use Case
 
+Linda Brown is the clinic administrator and she needs to order more medical supplies for the clinic. It is critical to both the Nurses and Doctors as well as the patients to have enough supplies to be able to properly treat everyone who comes through the doors of the clinic. From her office at the back of the clinic, she logs into the OpenMRS console and clicks on the "Reports" module. Linda needs to know how many patients were admitted to the clinic and what their diagnoses were to get a better idea of what kind and how many medical supplies to order. Based on these results, Linda can preemptively order supplies to meet the needs of the clinic in the coming months.
 
 #### Misuse Case
 
 
-```
-Clinic Staff needs the ability to
 
+```
+The system enables
+ 1. Upload Patient Files
+Doug crafts a malicious file to
+ 1. Upload reverse shell
+The system should be able to
+ 2. Whitelist files based on the file extension
+Doug
+ 2. Adds duplicate file extension (file.txt.jpg)
+To mitigate attacks contained in specific file types
+ 3. File type detector
+Doug
+ 3. Adds valid file type header before malicious code
+The system
+ 4. Upload directory has no execution privileges
+Attacker
+ 4. Gives up (unlikely but still...)
+ 
 ```
 
 #### Use/Misuse Diagram
