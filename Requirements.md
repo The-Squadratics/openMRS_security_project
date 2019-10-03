@@ -104,7 +104,10 @@ Work in progress
 
 #### Use Case
 
-[content here]
+User of OpenMRS want to be able to login to the application securely. So, the user not only expects but wants to believe that the website is safe, secured and the patient information is protected. 
+
+Ability to access the patient records for the doctors and other staff through their account has really made easier in these years. If we talk about the past, it was hard for doctors and other staff to view the patient history and conflict might have arrived in scheduling the appointment. Also, the system gives each individual member of the clinic to login their account which has really made easier in this days especially for doctors to see what patient has been going through. But this technology can still pose some challenges from the bad actor who has the wrong intention. 
+
 
 #### Misuse Case
 
