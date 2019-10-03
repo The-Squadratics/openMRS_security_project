@@ -68,25 +68,26 @@ Linda Brown is the clinic administrator and she needs to order more medical supp
 
 #### Misuse Case
 
+An attacker that knows the system is able view network traffic and analyze the traffice to determine the ideal time to enact a deadlock attack that would prevent the generation of reports from the database.
 
+The most likely scenarios would come from outside the clinic. In this case, Kyle Swarley is a former, potential patient that was asked to leave because of his unruly behavior and refusal to follow rules after being repeatedly asked.
 
 ```
 The system enables
- 1. Upload Patient Files
-Doug crafts a malicious file to
- 1. Upload reverse shell
+ 1. Generate Report from Database
+Kyle Swarley
+ 1. Eavesdrops on the network
 The system should be able to
- 2. Whitelist files based on the file extension
-Doug
- 2. Adds duplicate file extension (file.txt.jpg)
-To mitigate attacks contained in specific file types
- 3. File type detector
-Doug
- 3. Adds valid file type header before malicious code
-The system
- 4. Upload directory has no execution privileges
-Attacker
- 4. Gives up (unlikely but still...)
+ 2. Encrypt network traffic
+Kyle Swarley
+ 2. Analyzes the encrypted network traffic
+To warn users and prevent analyzed traffic
+ 3. Enpoint antivirus implemented
+ 3. Software logs monitored
+Kyle Swarley
+ 4. Forces a deadlock of the program
+System prevents a deadlock with 
+ 4. Consistent ordering of locking
  
 ```
 
@@ -96,7 +97,24 @@ Attacker
 
 #### Security Requirements
 
-Work in progress
+The use and misuse case detailed above documents a common scenario within the clinic.  The generation of reports.  The system provides this functionality but doesn't incorporate all of the potential mitigations we listed.  The system does afford the use of encryption, logging, and practices code review with best practices that include consistent ordering of thread locking.
+
+The system does not implement endpoint protection on the host computer that it is running on. That kind of antivirus protection would be up to Windows defender or an appropriate third party product for the clinic's situation.
+
+Encryption: https://wiki.openmrs.org/display/docs/Security+and+Encryption
+
+OpenMRS offers single direction encryption, hash validation, as well as two way encryption which is SHA-512 by default.
+
+Logging: https://wiki.openmrs.org/display/docs/Log+Manager+Module
+         https://wiki.openmrs.org/display/docs/Usage+Statistics+Module
+         https://wiki.openmrs.org/display/docs/Error+Logging+Module
+         https://wiki.openmrs.org/display/projects/Logging+Errors+to+the+Database
+       
+OpenMRS offers many modules available that can keep track of any kind of system data, even going so far as to have a module that will allow the viewing of logs at runtime.
+
+Deadlock Prevention: https://wiki.openmrs.org/display/docs/Code+Review+Checklist
+
+OpenMRS practices a Code Review Checklist which includes a section on Thread Safeness which details how to avoid deadlocks by keeping the threads synchronized when writing to them.
 
 ---
 
