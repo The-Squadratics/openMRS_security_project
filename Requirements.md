@@ -153,6 +153,7 @@ The most important requirement for the system is its security.
 ---
 
 #### Use/Misuse Diagram
+![SystemAdmin Misuse Case](https://user-images.githubusercontent.com/46797572/66096445-98853a80-e560-11e9-9729-5b26675a05e7.jpeg)
 [LucidChart - File Upload](https://www.lucidchart.com/documents/edit/879f5a52-9aca-450a-bfda-e4d9656520a1/0_0)
 
 ### Derive security requirements for each of the use cases using misuse case diagrams. 
