@@ -139,6 +139,7 @@ Attacker
 
 #### Security Requirements
 
+The most important requirement for the system is its security. 
 
 
 ### Group Case - Data Flow (5 / 5)
