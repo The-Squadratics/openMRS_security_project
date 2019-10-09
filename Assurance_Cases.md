@@ -31,9 +31,7 @@ The team must produce a markdown report that includes the following:
 ### Assurance Claims (Task 1)
 ---
 
-#### Claim 1 - File Upload
-
-OpenMRS is resilient to XSS attacks.
+#### Claim 1 - OpenMRS is resilient to XSS attacks.
 
 #### Claim 2 - Reporting (Database Flow)
 
