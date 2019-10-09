@@ -33,7 +33,7 @@ The team must produce a markdown report that includes the following:
 
 #### Claim 1 - File Upload
 
-[Add approved claim here]
+OpenMRS is resilient to XSS attacks.
 
 #### Claim 2 - Reporting (Database Flow)
 
