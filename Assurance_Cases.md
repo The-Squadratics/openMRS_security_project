@@ -39,7 +39,7 @@ The team must produce a markdown report that includes the following:
 
 #### Claim 3 - Form Data
 
-[Add approved claim here]
+The file upload functionality is resilient to arbitrary code execution.
 
 #### Claim 4 - Login
 
