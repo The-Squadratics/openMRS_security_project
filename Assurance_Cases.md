@@ -39,9 +39,7 @@ The team must produce a markdown report that includes the following:
 
 The file upload functionality is resilient to arbitrary code execution.
 
-#### Claim 4 - Login
-
-[Add approved claim here]
+#### Claim 4 - OpenMRS is acceptably secure against Authentication Abuse.
 
 #### Claim 5 - System Administration (Module Management)
 
