@@ -74,6 +74,31 @@ The file upload functionality is resilient to arbitrary code execution.
 ### Alignment of evidence with what the project (OpenMRS) supports (Task 3) 
 ---
 
+#### Case 1 - File Upload
+
+[Add case here]
+
+#### Case 2 - Database Query - Network Eavesdropping
+
+The first claim to support the Top Claim in this assurance is Claim C2 which claims that OpenMRS uses two-way encryption for security. This claim can be verified from the OpenMRS Wiki (https://wiki.openmrs.org/display/docs/Security+and+Encryption#SecurityandEncryption-TwoWayEncryption) where it explains the usage of Two-Way encryption in OpenMRS. Following this claim down to C3, it claims that OpenMRS uses modern encryption algorithms. Again, referencing the wiki, we can see that OpenMRS uses the AES encryption standard with Cipher Block Chaining (CBC) with 16 byte random initialization vectors. These are widely accepted secure algorithms in the cybersecurity community. A packet-capture analysis is listed as another form of evidence, but we do not currently have access to such an analysis to provide further proof that the encryption is implemented effectively.
+To avoid analysis of encrypted network traffic logging of network traffic would be necessary. It can be verified that OpenMRS offers these features from their documentation on their wiki (https://wiki.openmrs.org/display/docs/Log+Manager+Module, https://wiki.openmrs.org/display/docs/Usage+Statistics+Module). The third claim affirming network security deals with endpoint protection on the client accessing the OpenMRS web application. There is no evidence that can be found dealing with OpenMRS securing endpoints.
+
+The other C2 Claim about OpenMRS is that it only allows pre-approved clients to access the system. No resource can be found that backs up this claim, however, the C3 claim below it can be verified with role-based access controls. OpenMRS claims that it can protect the integrity of specific files using single direction encryption or hash validation (https://wiki.openmrs.org/display/docs/Security+and+Encryption#SecurityandEncryption-SingleDirectionEncryptionorHashValidation). This article from the wiki would affirm OpenMRS's ability to ensure that there are no unauthorized tampering of access control files by utilizing a SHA-512 + 128 character salt algorithm.
+
+
+#### Case 3 - Form Data
+
+[Add case here]
+
+#### Case 4 - Login
+
+[Add case here]
+
+#### Case 5 - System Administration (Module Management)
+
+[Add case here]
+
+
 ### Retrospective of Past Assignments (Task 4) 
 ---
 
