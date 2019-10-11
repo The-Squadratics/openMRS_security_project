@@ -33,9 +33,7 @@ The team must produce a markdown report that includes the following:
 
 #### Claim 1 - OpenMRS is resilient to XSS attacks.
 
-#### Claim 2 - Reporting (Database Flow)
-
-[Add approved claim here]
+#### Claim 2 - OpenMRS is adequately secure against network eavesdropping.
 
 #### Claim 3 - Form Data
 
@@ -56,9 +54,10 @@ The file upload functionality is resilient to arbitrary code execution.
 
 [Add case here]
 
-#### Case 2 - Reporting (Database Flow)
+#### Case 2 - Database Query - Network Eavesdropping
 
-[Add case here]
+![File Upload Diagram](https://github.com/patricklind5ay/hello-world/blob/master/Assurance%20Case%20%233.png?raw=true)
+[LucidChart - File Upload](https://www.lucidchart.com/invitations/accept/0c5d3797-6286-4e28-aa67-1d86460855ec)
 
 #### Case 3 - Form Data
 
