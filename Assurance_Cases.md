@@ -35,13 +35,11 @@ The team must produce a markdown report that includes the following:
 
 #### Claim 2 - OpenMRS is adequately secure against network eavesdropping.
 
-#### Claim 3 - The file upload functionality is resilient to arbitrary code execution. (Form Data)
+#### Claim 3 - The file upload functionality is resilient to arbitrary code execution.
 
 #### Claim 4 - OpenMRS is acceptably secure against Authentication Abuse.
 
-#### Claim 5 - System Administration (Module Management)
-
-[Add approved claim here]
+#### Claim 5 - OpenMRS is acceptably secure against unauthorized access/login to the software.
 
 ### Assurance Cases (Task 2) 
 ---
@@ -52,34 +50,32 @@ The team must produce a markdown report that includes the following:
 [LucidChart - XSS Attack](https://www.lucidchart.com/invitations/accept/40c67994-33ff-42d8-8475-f9519a70bd46)
 
 
-#### Case 2 - Database Query - Network Eavesdropping
+#### Case 2 - OpenMRS is adequately secure against network eavesdropping.
 
 ![Network Eavesdropping Diagram](https://github.com/patricklind5ay/hello-world/blob/master/Assurance%20Case%20%233.png?raw=true)
 [LucidChart - Network Eavesdropping](https://www.lucidchart.com/invitations/accept/0c5d3797-6286-4e28-aa67-1d86460855ec)
 
 #### Case 3 - File Upload
 
-![File Upload Diagram](https://user-images.githubusercontent.com/5983684/66694151-33bf9380-ec76-11e9-8cee-15833c840b3f.png)
+![File Upload Diagram](https://user-images.githubusercontent.com/5983684/66694864-17275980-ec7e-11e9-804e-098355fbfbcd.png)
 [LucidChart - File Upload](https://www.lucidchart.com/documents/edit/d2f9499d-6957-408f-a73c-93dacae7377b/0_0?shared=true)
-
-#### Case 3 - Form Data
-
-![File Upload Diagram](https://github.com/patricklind5ay/hello-world/blob/master/Assurance%20Case%20%232.jpeg?raw=true)
-[LucidChart - File Upload](https://www.lucidchart.com/invitations/accept/0c5d3797-6286-4e28-aa67-1d86460855ec)
 
 #### Case 4 - OpenMRS is acceptably secure against Authentication Abuse.
 
 ![Authentication Abuse](https://user-images.githubusercontent.com/41209887/66692768-35ce2600-ec67-11e9-85bd-783e7fe26463.jpeg)
 [LucidChart - Authentication - Login](https://www.lucidchart.com/documents/edit/1bc47d78-45fe-470c-a105-662cfba9bac1/0_0)
 
-#### Case 5 - System Administration (Module Management)
+~~#### Case 5 - System Administration (Module Management)~~ __???__
 
-[Add case here]
+#### Case 5 - Form Data
+
+![File Upload Diagram](https://github.com/patricklind5ay/hello-world/blob/master/Assurance%20Case%20%232.jpeg?raw=true)
+[LucidChart - File Upload](https://www.lucidchart.com/invitations/accept/0c5d3797-6286-4e28-aa67-1d86460855ec)
 
 ### Alignment of evidence with what the software (OpenMRS) supports (Task 3) 
 ---
 
-#### Case 1 - Form Data
+#### Case 1 - OpenMRS is resilient to XSS attacks
 
 The top claim in the chain suggests that OpenMRS is resilient against the XSS attacks which is rebutted by an argument that unless malicious files can be injected through parameter injection. OpenMRS is not resilient to XSS attacks. In order to support it, the claim was that the software is resilient against parameter injection. This was rebutted by the argument stating that OpenMRS is resilient against parameter injection until malicious files can be inserted by stored XSS and HTTP headers. This was countered by stating that OpenMRS does strong input validation of strings and files. This was supported by the evidence that OpenMRS has several functions which proves that the software is resilient against malicious files injected through stored XSS and HTTP headers.
 
@@ -95,20 +91,22 @@ According to the claim C3 and C4, OpenMRS uses session tokens and restricts clie
 
 The claim C5 stating that OpenMRS performs the auto bound checking against buffer overflow is refuted. Since there is no evidence that suggests that OpenMRS has functions that performs bound checking, the evidence for claim C5 is unfulfilled. Hence, the Baconinan Probability for this top claim is 2/3 (partial confidence).
 
-#### Case 2 - Database Query - Network Eavesdropping
+#### Case 2 - OpenMRS is adequately secure against network eavesdropping
 
 The first claim to support the Top Claim in this assurance is Claim C2 which claims that OpenMRS uses two-way encryption for security. This claim can be verified from the OpenMRS Wiki (https://wiki.openmrs.org/display/docs/Security+and+Encryption#SecurityandEncryption-TwoWayEncryption) where it explains the usage of Two-Way encryption in OpenMRS. Following this claim down to C3, it claims that OpenMRS uses modern encryption algorithms. Again, referencing the wiki, we can see that OpenMRS uses the AES encryption standard with Cipher Block Chaining (CBC) with 16 byte random initialization vectors. These are widely accepted secure algorithms in the cybersecurity community. A packet-capture analysis is listed as another form of evidence, but we do not currently have access to such an analysis to provide further proof that the encryption is implemented effectively.
 To avoid analysis of encrypted network traffic logging of network traffic would be necessary. It can be verified that OpenMRS offers these features from their documentation on their wiki (https://wiki.openmrs.org/display/docs/Log+Manager+Module, https://wiki.openmrs.org/display/docs/Usage+Statistics+Module). The third claim affirming network security deals with endpoint protection on the client accessing the OpenMRS web application. There is no evidence that can be found dealing with OpenMRS securing endpoints.
 
 The other C2 Claim about OpenMRS is that it only allows pre-approved clients to access the system. No resource can be found that backs up this claim, however, the C3 claim below it can be verified with role-based access controls. OpenMRS claims that it can protect the integrity of specific files using single direction encryption or hash validation (https://wiki.openmrs.org/display/docs/Security+and+Encryption#SecurityandEncryption-SingleDirectionEncryptionorHashValidation). This article from the wiki would affirm OpenMRS's ability to ensure that there are no unauthorized tampering of access control files by utilizing a SHA-512 + 128 character salt algorithm.
 
+#### Case 3 - File Upload
 
-#### Case 3 - File Data
+The top level claim that the file upload functionality in OpenMRS is resilient to arbitrary code execution is a challenging claim to diagram.  As a result, this case has proved much more difficult than expected. I think the primary reason is that it is a very narrow / specific case. Not only that, there doesn't seem to be any protections within the core system that protects against a malicious attack via file upload. All that functionality has been offloaded to other parts of the system and modules such as Apache [FileUpload](https://commons.apache.org/proper/commons-fileupload/apidocs/org/apache/commons/fileupload/FileUpload.html).
 
-The first claim to support the Top Claim in this assurance is Claim C2 which claims that OpenMRS has a session locking feature which include user to be logged out after certain time of inactivity. The second claim to support the first claim in this assurance is Claim C3 which claims that OpenMRS has two factor authentication. This following link provides the proof for this claim. https://wiki.openmrs.org/display/docs/Security+and+Encryption#SecurityandEncryption-TwoWayEncryption. This shows how the two way encryption is implemented in the OpenMRS.
+As a result, I haven't been able to find any specific evidence that shows there are mitigations in place like those mentioned in the requirements documentation.
 
-The third claim to support the second claim in this assurance is claim C4, one of the third claim states that openMRS has encryption and session tracking. Referring to the above link we can see that OpenMRS utilizes the AES/CBC/PKCS5Padding method for block cipher encryption and decryption. The other third claim is OpenMRS authenticates requests to each resource and provide the SSL valid certificate. This can be proved using the following link https://wiki.openmrs.org/display/docs/Security+and+Encryption#SecurityandEncryption-SingleDirectionEncryptionorHashValidation this documentation provides the detailed about how the key is exchanged during authentication and and getting the random token.  Furthermore, this documents also provides the proof for the another claim which states that OpenMRS uses hash validation functionality.
+For example, within Apache the system admin could set up things like file whitelisting and file type parameters, but there's no evidence that within the project documentation on how to accomplish this directly.  The same goes for the main protection against malicious code execution, changing the permissions on the specific directory used for uploaded files.
 
+It's possible that the system could be set up to support those sorts of defenses, but it is left up to those installing and running the system to do so and little to no guidance is provided on the crucial question of how or even why.
 
 #### Case 4 - Login - Authentication Abuse
 
@@ -121,7 +119,11 @@ The another C2 claim is OpenMRS provides the functionality of single direction e
 
 #### Case 5 - System Administration (Module Management)
 
-[Add case here]
+#### Case ??? - File Data / Form Data ???
+
+The first claim to support the Top Claim in this assurance is Claim C2 which claims that OpenMRS has a session locking feature which include user to be logged out after certain time of inactivity. The second claim to support the first claim in this assurance is Claim C3 which claims that OpenMRS has two factor authentication. This following link provides the proof for this claim. https://wiki.openmrs.org/display/docs/Security+and+Encryption#SecurityandEncryption-TwoWayEncryption. This shows how the two way encryption is implemented in the OpenMRS.
+
+The third claim to support the second claim in this assurance is claim C4, one of the third claim states that openMRS has encryption and session tracking. Referring to the above link we can see that OpenMRS utilizes the AES/CBC/PKCS5Padding method for block cipher encryption and decryption. The other third claim is OpenMRS authenticates requests to each resource and provide the SSL valid certificate. This can be proved using the following link https://wiki.openmrs.org/display/docs/Security+and+Encryption#SecurityandEncryption-SingleDirectionEncryptionorHashValidation this documentation provides the detailed about how the key is exchanged during authentication and and getting the random token.  Furthermore, this documents also provides the proof for the another claim which states that OpenMRS uses hash validation functionality.
 
 
 ### Retrospective of Past Assignments (Task 4) 
