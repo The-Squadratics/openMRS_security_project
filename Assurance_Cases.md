@@ -117,9 +117,7 @@ The second claim to support the first claim in this assurance is Claim C3 which 
 The another C2 claim is OpenMRS provides the functionality of single direction encryption. The following link provides the proof for that claim https://wiki.openmrs.org/display/docs/Security+and+Encryption#SecurityandEncryption-SingleDirectionEncryptionorHashValidation . the hashMatches() method provides access to single direction encryption utilities by password validation and checks against both SHA1 and SHA-512 + 128 character salt algorithms. encodeString() method returns the parameter after being encoded using the OpenMRS default encryption which is currently hardcoded to SHA-512.
 
 
-#### Case 5 - System Administration (Module Management)
-
-#### Case ??? - File Data / Form Data ???
+#### Case 5 - Unauthorized access/login to the software
 
 The first claim to support the Top Claim in this assurance is Claim C2 which claims that OpenMRS has a session locking feature which include user to be logged out after certain time of inactivity. The second claim to support the first claim in this assurance is Claim C3 which claims that OpenMRS has two factor authentication. This following link provides the proof for this claim. https://wiki.openmrs.org/display/docs/Security+and+Encryption#SecurityandEncryption-TwoWayEncryption. This shows how the two way encryption is implemented in the OpenMRS.
 
