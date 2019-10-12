@@ -99,10 +99,7 @@ The other C2 Claim about OpenMRS is that it only allows pre-approved clients to 
 
 ### Retrospective of Past Assignments (Task 4) 
 ---
-
-Summary of team reflection / retrospective meeting
- * Issues
- * Planned changes
+In the meeting, each of the team members was asked to come up with at least two assurance claims on which we can have a discussion. We selected seven of them to be approved by the instructor. We discussed what factors should be chosen for coming up with the assurance cases. There was a small debate about if we should consider the individual features and data flow to come up with the assurance cases or keep our software in mind. After the approval of the claims, each of us took one claim each and discussed on the rebuttals and strategies to counter them using claims. There were no major blockers for this task. Once we had a good idea about how to approach each claim, there was no difficulty in coming up with the claims. Also, during the class, we had a good discussion about the evidence for all the claims and no major changes were made. 
 
 ### The-Squadratics GitHub
 ---
