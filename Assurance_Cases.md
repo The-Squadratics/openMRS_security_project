@@ -90,7 +90,7 @@ The other C2 Claim about OpenMRS is that it only allows pre-approved clients to 
 
 [Add case here]
 
-#### Case 4 - Login
+#### Case 4 - Login - Authentication Abuse
 
 The first claim to support the Top Claim in this assurance is Claim C2 which claims that OpenMRS has the functionality of validating password complexity. OpenMRS requires the certain character to login to its page. It requires certain number of characters and only the authorized annotation has the ability to add or remove the user and their privileges. This can also be verified using the following page: https://wiki.openmrs.org/display/docs/Access+Control+in+OpenMRS 
 
