@@ -63,7 +63,7 @@ The team must produce a markdown report that includes the following:
 
 #### Case 4 - Login
 
-![Assurance Case #4](https://user-images.githubusercontent.com/41209887/66692734-d6701600-ec66-11e9-9876-e144a4f0e8af.jpeg)
+![Assurance Case #4 ](https://user-images.githubusercontent.com/41209887/66692768-35ce2600-ec67-11e9-85bd-783e7fe26463.jpeg)
 [LucidChart - Login](https://www.lucidchart.com/documents/edit/1bc47d78-45fe-470c-a105-662cfba9bac1/0_0)
 
 #### Case 5 - System Administration (Module Management)
