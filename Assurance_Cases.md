@@ -49,13 +49,18 @@ The team must produce a markdown report that includes the following:
 #### Case 1 - OpenMRS is resilient to XSS attacks.
 
 ![Assurance Case - XSS attack](https://user-images.githubusercontent.com/46797572/66692337-146b3b00-ec63-11e9-8f08-df9f9e72a5ee.jpeg)
-[LucidChart - Form Data](https://www.lucidchart.com/invitations/accept/40c67994-33ff-42d8-8475-f9519a70bd46)
+[LucidChart - XSS Attack](https://www.lucidchart.com/invitations/accept/40c67994-33ff-42d8-8475-f9519a70bd46)
 
 
 #### Case 2 - Database Query - Network Eavesdropping
 
-![File Upload Diagram](https://github.com/patricklind5ay/hello-world/blob/master/Assurance%20Case%20%233.png?raw=true)
-[LucidChart - File Upload](https://www.lucidchart.com/invitations/accept/0c5d3797-6286-4e28-aa67-1d86460855ec)
+![Network Eavesdropping Diagram](https://github.com/patricklind5ay/hello-world/blob/master/Assurance%20Case%20%233.png?raw=true)
+[LucidChart - Network Eavesdropping](https://www.lucidchart.com/invitations/accept/0c5d3797-6286-4e28-aa67-1d86460855ec)
+
+#### Case 3 - File Upload
+
+![File Upload Diagram(https://user-images.githubusercontent.com/5983684/66694151-33bf9380-ec76-11e9-8cee-15833c840b3f.png)
+[LucidChart - File Upload(https://www.lucidchart.com/documents/edit/d2f9499d-6957-408f-a73c-93dacae7377b/0_0?shared=true)
 
 #### Case 3 - Form Data
 
@@ -64,8 +69,8 @@ The team must produce a markdown report that includes the following:
 
 #### Case 4 - OpenMRS is acceptably secure against Authentication Abuse.
 
-![Assurance Case #4 ](https://user-images.githubusercontent.com/41209887/66692768-35ce2600-ec67-11e9-85bd-783e7fe26463.jpeg)
-[LucidChart - Login](https://www.lucidchart.com/documents/edit/1bc47d78-45fe-470c-a105-662cfba9bac1/0_0)
+![Authentication Abuse](https://user-images.githubusercontent.com/41209887/66692768-35ce2600-ec67-11e9-85bd-783e7fe26463.jpeg)
+[LucidChart - Authentication - Login](https://www.lucidchart.com/documents/edit/1bc47d78-45fe-470c-a105-662cfba9bac1/0_0)
 
 #### Case 5 - System Administration (Module Management)
 
