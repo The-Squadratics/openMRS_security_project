@@ -65,9 +65,7 @@ The team must produce a markdown report that includes the following:
 ![Authentication Abuse](https://user-images.githubusercontent.com/41209887/66692768-35ce2600-ec67-11e9-85bd-783e7fe26463.jpeg)
 [LucidChart - Authentication - Login](https://www.lucidchart.com/documents/edit/1bc47d78-45fe-470c-a105-662cfba9bac1/0_0)
 
-~~#### Case 5 - System Administration (Module Management)~~ __???__
-
-#### Case 5 - Form Data
+#### Case 5 - OpenMRS is acceptably secure against unauthorized access/login to the software.
 
 ![File Upload Diagram](https://github.com/patricklind5ay/hello-world/blob/master/Assurance%20Case%20%232.jpeg?raw=true)
 [LucidChart - File Upload](https://www.lucidchart.com/invitations/accept/0c5d3797-6286-4e28-aa67-1d86460855ec)
