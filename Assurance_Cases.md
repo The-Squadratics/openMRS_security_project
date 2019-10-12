@@ -105,7 +105,10 @@ The other C2 Claim about OpenMRS is that it only allows pre-approved clients to 
 
 #### Case 3 - File Data
 
-[Add case here]
+The first claim to support the Top Claim in this assurance is Claim C2 which claims that OpenMRS has a session locking feature which include user to be logged out after certain time of inactivity. The second claim to support the first claim in this assurance is Claim C3 which claims that OpenMRS has two factor authentication. This following link provides the proof for this claim. https://wiki.openmrs.org/display/docs/Security+and+Encryption#SecurityandEncryption-TwoWayEncryption. This shows how the two way encryption is implemented in the OpenMRS.
+
+The third claim to support the second claim in this assurance is claim C4, one of the third claim states that openMRS has encryption and session tracking. Referring to the above link we can see that OpenMRS utilizes the AES/CBC/PKCS5Padding method for block cipher encryption and decryption. The other third claim is OpenMRS authenticates requests to each resource and provide the SSL valid certificate. This can be proved using the following link https://wiki.openmrs.org/display/docs/Security+and+Encryption#SecurityandEncryption-SingleDirectionEncryptionorHashValidation this documentation provides the detailed about how the key is exchanged during authentication and and getting the random token.  Furthermore, this documents also provides the proof for the another claim which states that OpenMRS uses hash validation functionality.
+
 
 #### Case 4 - Login - Authentication Abuse
 
