@@ -59,7 +59,7 @@ The team must produce a markdown report that includes the following:
 
 #### Case 3 - File Upload
 
-![File Upload Diagram(https://user-images.githubusercontent.com/5983684/66694151-33bf9380-ec76-11e9-8cee-15833c840b3f.png)
+![File Upload Diagram](https://user-images.githubusercontent.com/5983684/66694151-33bf9380-ec76-11e9-8cee-15833c840b3f.png)
 [LucidChart - File Upload(https://www.lucidchart.com/documents/edit/d2f9499d-6957-408f-a73c-93dacae7377b/0_0?shared=true)
 
 #### Case 3 - Form Data
