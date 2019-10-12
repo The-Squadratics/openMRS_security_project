@@ -92,7 +92,12 @@ The other C2 Claim about OpenMRS is that it only allows pre-approved clients to 
 
 #### Case 4 - Login
 
-[Add case here]
+The first claim to support the Top Claim in this assurance is Claim C2 which claims that OpenMRS has the functionality of validating password complexity. OpenMRS requires the certain character to login to its page. It requires certain number of characters and only the authorized annotation has the ability to add or remove the user and their privileges. This can also be verified using the following page: https://wiki.openmrs.org/display/docs/Access+Control+in+OpenMRS 
+
+The second claim to support the first claim in this assurance is Claim C3 which claims that OpenMRS has the functionality of two way encryption. The following link provides the evidence of this claim. https://wiki.openmrs.org/display/docs/Security+and+Encryption#SecurityandEncryption-TwoWayEncryption . Referring to this link we can see that OpenMRS utilizes the AES/CBC/PKCS5Padding method for block cipher encryption and decryption. The initialization vector is an array of 16 bytes and will only properly decrypt or encrypt if paired with a specific secret key byte array. This is widely accepted algorithm in cybersecurity community. Furthermore, this documents also provides the proof for the another claim which states that OpenMRS uses hash validation functionality. When the attacker doesn’t possess the shared secret key which is responded by the server. So, the attacker uses the second connection to the server and sends it. This kind of attacks can be mitigated by using hash response from the server. 
+
+The another C2 claim is OpenMRS provides the functionality of single direction encryption. The following link provides the proof for that claim https://wiki.openmrs.org/display/docs/Security+and+Encryption#SecurityandEncryption-SingleDirectionEncryptionorHashValidation . the hashMatches() method provides access to single direction encryption utilities by password validation and checks against both SHA1 and SHA-512 + 128 character salt algorithms. encodeString() method returns the parameter after being encoded using the OpenMRS default encryption which is currently hardcoded to SHA-512.
+
 
 #### Case 5 - System Administration (Module Management)
 
