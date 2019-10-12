@@ -62,7 +62,7 @@ The team must produce a markdown report that includes the following:
 ![File Upload Diagram](https://github.com/patricklind5ay/hello-world/blob/master/Assurance%20Case%20%232.jpeg?raw=true)
 [LucidChart - File Upload](https://www.lucidchart.com/invitations/accept/0c5d3797-6286-4e28-aa67-1d86460855ec)
 
-#### Case 4 - Login
+#### Case 4 - OpenMRS is acceptably secure against Authentication Abuse.
 
 ![Assurance Case #4 ](https://user-images.githubusercontent.com/41209887/66692768-35ce2600-ec67-11e9-85bd-783e7fe26463.jpeg)
 [LucidChart - Login](https://www.lucidchart.com/documents/edit/1bc47d78-45fe-470c-a105-662cfba9bac1/0_0)
