@@ -79,9 +79,21 @@ The team must produce a markdown report that includes the following:
 ### Alignment of evidence with what the software (OpenMRS) supports (Task 3) 
 ---
 
-#### Case 1 - File Upload
+#### Case 1 - Form Data
 
-[Add case here]
+The top claim in the chain suggests that OpenMRS is resilient against the XSS attacks which is rebutted by an argument that unless malicious files can be injected through parameter injection. OpenMRS is not resilient to XSS attacks. In order to support it, the claim was that the software is resilient against parameter injection. This was rebutted by the argument stating that OpenMRS is resilient against parameter injection until malicious files can be inserted by stored XSS and HTTP headers. This was countered by stating that OpenMRS does strong input validation of strings and files. This was supported by the evidence that OpenMRS has several functions which proves that the software is resilient against malicious files injected through stored XSS and HTTP headers.
+
+OpenMRS has several functions to filter untrusted user input and prevent XSS.
+
+* String encodeHtmlContent(String input) - This function allows untrusted data to be safely displayed in HTML. This is mainly achieved by converting < and > symbols to &#60; and &#62; respectively. This kind of filtering will prevent XSS with script tag injection.
+* String encodeHtmlAttribute(String input) - This function allows untrusted data to be safely displayed in HTML attributes. This is mainly achieved by converting " and ' symbols to &#34; and &#39; respectively. This kind of filtering will prevent XSS with HTML attribute injection.
+* String encodeJavaScript(String input) - This function allows untrusted data to be safely displayed in dynamically generated JavaScript. This is mainly achieved by using JavaScript backslash-escaping. This kind of filtering will prevent XSS with JavaScript injection.
+
+The link to this documentation is provided here: https://wiki.openmrs.org/display/docs/UI+Framework+Reference+Guide
+
+According to the claim C3 and C4, OpenMRS uses session tokens and restricts client-side scripting using a server called Tomcat. OpenMRS uses the newest versions of Tomcat (> version 7) and by default HttpOnly flag will be set by the server. The HttpOnly flag is an additional flag that is used to prevent an XSS (Cross-Site Scripting) exploit from taking access to the session cookie. Because one of the most known ways of subjecting to an XSS attack is access to the session cookie, and to subsequently hijack the victim’s session, the HttpOnly flag is a useful prevention mechanism where a client-side script won't be able to access the session cookie from. The link to this documentation is provided here: https://wiki.openmrs.org/display/docs/Step+3+-+Install+Tomcat
+
+The claim C5 stating that OpenMRS performs the auto bound checking against buffer overflow is refuted. Since there is no evidence that suggests that OpenMRS has functions that performs bound checking, the evidence for claim C5 is unfulfilled. Hence, the Baconinan Probability for this top claim is 2/3 (partial confidence).
 
 #### Case 2 - Database Query - Network Eavesdropping
 
@@ -91,7 +103,7 @@ To avoid analysis of encrypted network traffic logging of network traffic would 
 The other C2 Claim about OpenMRS is that it only allows pre-approved clients to access the system. No resource can be found that backs up this claim, however, the C3 claim below it can be verified with role-based access controls. OpenMRS claims that it can protect the integrity of specific files using single direction encryption or hash validation (https://wiki.openmrs.org/display/docs/Security+and+Encryption#SecurityandEncryption-SingleDirectionEncryptionorHashValidation). This article from the wiki would affirm OpenMRS's ability to ensure that there are no unauthorized tampering of access control files by utilizing a SHA-512 + 128 character salt algorithm.
 
 
-#### Case 3 - Form Data
+#### Case 3 - File Data
 
 [Add case here]
 
