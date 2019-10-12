@@ -35,9 +35,7 @@ The team must produce a markdown report that includes the following:
 
 #### Claim 2 - OpenMRS is adequately secure against network eavesdropping.
 
-#### Claim 3 - Form Data
-
-The file upload functionality is resilient to arbitrary code execution.
+#### Claim 3 - The file upload functionality is resilient to arbitrary code execution. (Form Data)
 
 #### Claim 4 - OpenMRS is acceptably secure against Authentication Abuse.
 
@@ -48,9 +46,11 @@ The file upload functionality is resilient to arbitrary code execution.
 ### Assurance Cases (Task 2) 
 ---
 
-#### Case 1 - File Upload
+#### Case 1 - OpenMRS is resilient to XSS attacks.
 
-[Add case here]
+![Assurance Case - XSS attack](https://user-images.githubusercontent.com/46797572/66692337-146b3b00-ec63-11e9-8f08-df9f9e72a5ee.jpeg)
+[LucidChart - Form Data](https://www.lucidchart.com/invitations/accept/40c67994-33ff-42d8-8475-f9519a70bd46)
+
 
 #### Case 2 - Database Query - Network Eavesdropping
 
@@ -69,7 +69,7 @@ The file upload functionality is resilient to arbitrary code execution.
 
 [Add case here]
 
-### Alignment of evidence with what the project (OpenMRS) supports (Task 3) 
+### Alignment of evidence with what the software (OpenMRS) supports (Task 3) 
 ---
 
 #### Case 1 - File Upload
