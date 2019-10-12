@@ -59,7 +59,8 @@ The team must produce a markdown report that includes the following:
 
 #### Case 3 - Form Data
 
-[Add case here]
+![File Upload Diagram](https://github.com/patricklind5ay/hello-world/blob/master/Assurance%20Case%20%232.jpeg?raw=true)
+[LucidChart - File Upload](https://www.lucidchart.com/invitations/accept/0c5d3797-6286-4e28-aa67-1d86460855ec)
 
 #### Case 4 - Login
 
