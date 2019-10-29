@@ -12,5 +12,5 @@ __Team Members:__ Mittranj Pansuriya, Patrick Lindsay, Jeson Rijal, Travis Ingra
 * [Project Proposal](https://github.com/The-Squadratics/openMRS_security_project/blob/master/Project_proposal.md)
 * [Security Requirements](https://github.com/The-Squadratics/openMRS_security_project/blob/master/Requirements.md)
 * [Assurance Cases](https://github.com/The-Squadratics/openMRS_security_project/blob/master/Assurance_Cases.md)
-* [Designing for Software Security Engineering]
+* [Designing for Software Security Engineering](https://github.com/The-Squadratics/openMRS_security_project/blob/master/Designing%20for%20SSE.md)
 * [Code analysis for Software Security Engineering]
