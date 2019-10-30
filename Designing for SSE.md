@@ -25,9 +25,14 @@ The team must produce a markdown report that includes the following:
 
 |Criteria|Rating|Points|
 |---|---|---|
-|Quality of Threat Models| - | 40 points|
-|Breadth and Depth of Threat Model Analysis| - | 40 points|
-|Project Planning and Coordination| - | 20 points|
+|__Quality of Threat Models__
+Proper wording of model elements
+Clean, coherent, and valid DFD diagram| - | 30 points|
+|__Mitigation Quality__
+Quality of analysis to mitigate threats| - | 20 points|
+|__Quality of Observations__
+Observations from OSS project align with the high-priority threats identified from the DFD diagram analysis | - | 30 points |
+|__Project Planning and Coordination__| - | 20 points|
 
 [__Threat Modeling Assignment__](https://robinagandhi.github.io/swa/slides/lecture-4/design-for-software-se.html#66)
 
