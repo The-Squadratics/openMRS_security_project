@@ -21,7 +21,7 @@ The team must produce a markdown report that includes the following:
 
 ---
 
-### Rubric (Temporary)
+### Rubric
 
 |Criteria|Rating|Points|
 |---|---|---|
@@ -39,24 +39,12 @@ Observations from OSS project align with the high-priority threats identified fr
 ### Designing for SSE - Threat Models (Task 1)
 ---
 
-#### Data Flow 1 - [Add 1st data flow here]
+#### Data Flow 1 - [User Input via Form Data]
  * Threat Model Diagram ![Threat Model Diagram 1]()
  * Threat Model Analysis [Here]
 
-#### Data Flow 2 - [Add 2nd data flow here]
+#### Data Flow 2 - [User Input via File Upload]
  * Threat Model Diagram ![Threat Model Diagram 2]()
- * Threat Model Analysis [Here]
-
-#### Data Flow 3 - [Add 3rd data flow here]
- * Threat Model Diagram ![Threat Model Diagram 3]()
- * Threat Model Analysis [Here]
-
-#### Data Flow 4 - [Add 4th data flow here]
- * Threat Model Diagram ![Threat Model Diagram 4]()
- * Threat Model Analysis [Here]
-
-#### Data Flow 5 - [Add 5th data flow here]
- * Threat Model Diagram ![Threat Model Diagram 5]()
  * Threat Model Analysis [Here]
 
 ### Designing for SSE - OpenMRS Review / Observations / Summary (Task 2) 
@@ -65,12 +53,6 @@ Observations from OSS project align with the high-priority threats identified fr
 #### Data Flow 1 - [Add review / summary for 1st data flow here]
 
 #### Data Flow 2 - [Add review / summary for 2nd data flow here]
-
-#### Data Flow 3 - [Add review / summary for 3rd data flow here]
-
-#### Data Flow 4 - [Add review / summary for 4th data flow here]
-
-#### Data Flow 5 - [Add review / summary for 5th data flow here]
 
 ### Retrospective of Past Assignments (Task 3) 
 ---
