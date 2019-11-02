@@ -13,6 +13,8 @@ The team must produce a markdown report that includes the following:
 * (__Task 1__) Develop threat models for critical data-flows through the software.
   * Misuse and assurance cases will provide starting points for examination.
   * Include threat model diagrams and threat analysis.
+    * Level 0 Diagrams for each use case
+    * Consolidate and present DFDs for remaining cases
 * (__Task 2__) Using threat model analysis, review OSS project for design related issues. Summarize your observations.
 * (__Task 3__) Provide a summary of your team reflection meeting.
   * What issues occurred?
@@ -39,11 +41,14 @@ Observations from OSS project align with the high-priority threats identified fr
 ### Designing for SSE - Threat Models (Task 1)
 ---
 
-#### Data Flow 1 - [User Input via Form Data]
+#### Level 0 Data Flow Diagrams
+ * Diagram Use Cases from previous project steps
+
+#### Consolidate Data Flow 1 - [User Input via Form Data]
  * Threat Model Diagram ![Threat Model Diagram 1]()
  * Threat Model Analysis [Here]
 
-#### Data Flow 2 - [User Input via File Upload]
+#### Consolidated Data Flow 2 - [User Input for Role Management]
  * Threat Model Diagram ![Threat Model Diagram 2]()
  * Threat Model Analysis [Here]
 
