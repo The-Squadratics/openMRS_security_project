@@ -43,6 +43,10 @@ Observations from OSS project align with the high-priority threats identified fr
 
 #### Level 0 Data Flow Diagrams
  * Diagram Use Cases from previous project steps
+ 
+ The Level 0 Data Flow Diagrams for the use cases we previously developed.
+ 
+ ![Level 0 DFDs](https://user-images.githubusercontent.com/5983684/68076979-fd16fd80-fd89-11e9-9566-62bd20240829.png)
 
 #### Consolidate Data Flow 1 - [User Input via Form Data]
  * Threat Model Diagram ![Threat Model Diagram 1]()
