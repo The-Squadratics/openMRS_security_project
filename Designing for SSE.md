@@ -21,8 +21,6 @@ The team must produce a markdown report that includes the following:
   * What did you plan to change moving forward?
 * Link to your team GitHub repository that shows your internal project task assignments and collaborations to finish this task.
 
----
-
 ### Designing for SSE - Threat Models (Task 1)
 ---
 
@@ -53,8 +51,9 @@ The team must produce a markdown report that includes the following:
 
 Here is where we will discuss our effectiveness as a group in preparing for and working through these assignments.
 
----
 ### Rubric
+
+---
 
 |Criteria|Rating|Points|
 |---|---|---|
