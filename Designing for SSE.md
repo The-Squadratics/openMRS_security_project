@@ -29,14 +29,24 @@ The team must produce a markdown report that includes the following:
  
  The Level 0 Data Flow Diagrams for the use cases we previously developed.
  
+ * File Upload - Level 0 DFD
+ ![Level 0 File Upload](https://user-images.githubusercontent.com/46797572/68782284-c13c2d80-05fe-11ea-8868-19ca29a46577.JPG) 
+ 
+ * Module Update - Level 0 DFD
  ![Level 0 Module Update](https://user-images.githubusercontent.com/46797572/68782282-c0a39700-05fe-11ea-88b4-93edd0f9c13a.JPG)
+
+ * Form Data - Level 0 DFD
+ ![Level 0 Form Data](https://user-images.githubusercontent.com/46797572/68782286-c13c2d80-05fe-11ea-9e4a-6149d0cdc2d9.JPG)
+
+ * Login - Level 0 DFD
+ ![Level 0 Login](https://user-images.githubusercontent.com/46797572/68782287-c13c2d80-05fe-11ea-9f7f-6d0e2687fb60.JPG)
+ 
+ * Server Query - Level 0 DFD
+ ![Level 0 Server Query](https://user-images.githubusercontent.com/46797572/68782283-c13c2d80-05fe-11ea-8ca2-94e76c8e0ad7.JPG)
+
 
 #### Consolidate Data Flow 1 - [User Input via Form Data]
  * Threat Model Diagram ![Threat Model Diagram 1]()
- * Threat Model Analysis [Here]
-
-#### Consolidated Data Flow 2 - [User Input for Role Management]
- * Threat Model Diagram ![Threat Model Diagram 2]()
  * Threat Model Analysis [Here]
 
 ### Designing for SSE - OpenMRS Review / Observations / Summary (Task 2) 
