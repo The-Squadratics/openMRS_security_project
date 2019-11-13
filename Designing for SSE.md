@@ -49,7 +49,9 @@ The team must produce a markdown report that includes the following:
  * Threat Model Diagram 
  ![Level 1 Threat Model](https://user-images.githubusercontent.com/46797572/68784063-97d0d100-0601-11ea-98f7-01593ab82be9.JPG)
 
- * Threat Model Analysis [Here]
+ * Threat Model Analysis
+ [Threat Modeling Report.pdf](https://github.com/The-Squadratics/openMRS_security_project/files/3842984/Threat.Modeling.Report.pdf)
+
 
 ### Designing for SSE - OpenMRS Review / Observations / Summary (Task 2) 
 ---
