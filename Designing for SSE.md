@@ -64,9 +64,37 @@ The summary of our observations are documented below.  We used STRIDE as a means
 
 ### Information Disclosure
 
+Standard mitigation strategies for information disclosure type threats typically include the use of data encryption that makes use of established standards and follows industry best practices for key management.
+
+Interactions between the front end `client` and the OpenMRS backend are handled by an API written in Java.  In our scenario, the system is set up and used on an intranet and so data isn't flowing back and forth on the open internet.
+
+Still, the API is written in such a way that any requests and associated responses are still processed using HTTPS and TLS to ensure communications are kept reasonably secure.
+
 ### Denial of Service
 
+Standard mitigation strategies for this category of threat typically include the following;
+* The use of firewall rules and other network protections to ensure attacks aren't able to reduce the availability of the system.
+* The use of disk and processor quotas to prevent excessive use of system resources by rogue processes or network attacks.
+
+Given that this system and its associated processes are deployed internally and not exposed to external networks or the internet at large, this category of threat is not something the system protects against.
+
+Network protections like those detailed above would be implemented by the clinic system administrators when planning out and setting up a given installation of OpenMRS.
+
 ### Elevation of Privilege
+
+Standard mitigation strategies for Elevation of Privilege type threats typically include the following;
+* Input validation
+* Access control lists, Roles, and Groups
+* Ensuring the least amount of access and information is available for given users or system / process actions
+
+In the context of OpenMRS, there are two different type of privilege elevation, those done within the system and those within the machine the system is running on. For OpenMRS, the application itself and associated processes do not need to be run with admin privileges so we do not concern ourselves with that aspect.
+
+No single instance of OpenMRS will be set up exactly the same.  Still, the system has implemented robust [access controls](https://wiki.openmrs.org/display/docs/Access+Control+in+OpenMRS) that allow administrators to set and monitor how the users of the system interact with it and what data they can view and modify.
+
+These access controls are [implemented](https://wiki.openmrs.org/display/docs/Privilege+Checking+for+Access+Control+in+OpenMRS) in such a way that data requests that are initiated from the web front-end make use of specific services (AuthorizationAdvice) that will make additional calls depending on the request and perform checks using the `hasPrivilege()` methods available in most classes.
+Only after running through the various Context / User / Role checks will the data be made available.  If the user does not have access, then access will be denied.
+
+In this way OpenMRS is able to mitigate threats of privilege escalation within processes and data requests that occur.
 
 
 ### Team Retrospective (Task 3)
