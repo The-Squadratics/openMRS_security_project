@@ -46,15 +46,15 @@ The team must produce a markdown report that includes the following:
 
 
 #### Consolidate Data Flow 1 - [User Input via Form Data]
- * Threat Model Diagram ![Threat Model Diagram 1]()
+ * Threat Model Diagram 
+ ![Level 1 Threat Model](https://user-images.githubusercontent.com/46797572/68784063-97d0d100-0601-11ea-98f7-01593ab82be9.JPG)
+
  * Threat Model Analysis [Here]
 
 ### Designing for SSE - OpenMRS Review / Observations / Summary (Task 2) 
 ---
 
 #### Data Flow 1 - [Add review / summary for 1st data flow here]
-
-#### Data Flow 2 - [Add review / summary for 2nd data flow here]
 
 ### Retrospective of Past Assignments (Task 3) 
 ---
