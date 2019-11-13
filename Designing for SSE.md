@@ -25,9 +25,8 @@ The team must produce a markdown report that includes the following:
 ---
 
 #### Level 0 Data Flow Diagrams
- * Diagram Use Cases from previous project steps
  
- The Level 0 Data Flow Diagrams for the use cases we previously developed.
+ Here are the Level 0 Data Flow Diagrams for the use cases we developed in previous assignments.
  
  * File Upload - Level 0 DFD
  ![Level 0 File Upload](https://user-images.githubusercontent.com/46797572/68782284-c13c2d80-05fe-11ea-8868-19ca29a46577.JPG) 
@@ -52,16 +51,32 @@ The team must produce a markdown report that includes the following:
  * Threat Model Analysis
  [Threat Modeling Report.pdf](https://github.com/The-Squadratics/openMRS_security_project/files/3842984/Threat.Modeling.Report.pdf)
 
-
 ### Designing for SSE - OpenMRS Review / Observations / Summary (Task 2) 
+
+---
+The summary of our observations are documented below.  We used STRIDE as a means of categorizing the threats and possible mitigations. The information was taken from project documentation found on the [OpenMRS Wiki](https://wiki.openmrs.org) as well as the [codebase itself](https://github.com/openmrs/openmrs-core).
+
+### Spoofing
+
+### Tampering
+
+### Repudiation
+
+### Information Disclosure
+
+### Denial of Service
+
+### Elevation of Privilege
+
+
+### Team Retrospective (Task 3)
 ---
 
-#### Data Flow 1 - [Add review / summary for 1st data flow here]
+Even though we've managed to complete each assignment our group continues to struggle a little with regards to task distribution, communication, and follow through.  For this assignment we did meet twice and spent time working through and discussing the relevant threats and producing the initial Data-Flow Diagrams.
 
-### Retrospective of Past Assignments (Task 3) 
----
+These meetings went okay and were helpful for everyone. One of the problems we kept running into was how to interrupt the assignment instructions and what was expected of us.
 
-Here is where we will discuss our effectiveness as a group in preparing for and working through these assignments.
+For the final assignment and the presentation we are going to try and be better about defining tasks, communicating any issues or problems we individually encounter, asking for help when needed, and following through.
 
 ### Rubric
 
