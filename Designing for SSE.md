@@ -38,7 +38,7 @@ The team must produce a markdown report that includes the following:
  * Form Data - Level 0 DFD
  ![Level 0 Form Data](https://user-images.githubusercontent.com/46797572/68782286-c13c2d80-05fe-11ea-9e4a-6149d0cdc2d9.JPG)
 
- * Login - Level 0 DFD
+ * Login by the user - Level 0 DFD
  ![Level 0 Login](https://user-images.githubusercontent.com/46797572/68782287-c13c2d80-05fe-11ea-9f7f-6d0e2687fb60.JPG)
  
  * Server Query - Level 0 DFD
