@@ -75,10 +75,11 @@ Still, the API is written in such a way that any requests and associated respons
 Standard mitigation strategies for this category of threat typically include the following;
 * The use of firewall rules and other network protections to ensure attacks aren't able to reduce the availability of the system.
 * The use of disk and processor quotas to prevent excessive use of system resources by rogue processes or network attacks.
+* Making Http request and taking encrypted username and password as a parameter and allowing log sleeping for 3 seconds incase of bad     username or password
 
 Given that this system and its associated processes are deployed internally and not exposed to external networks or the internet at large, this category of threat is not something the system protects against.
 
-Network protections like those detailed above would be implemented by the clinic system administrators when planning out and setting up a given installation of OpenMRS.
+Network protections like those detailed above would be implemented by the clinic system administrators when planning out and setting up a given installation of OpenMRS. OpenMRS has the feature of encription username and password and also allows the logging sleep for 3 second feature in case of bad username and password.
 
 ### Elevation of Privilege
 
