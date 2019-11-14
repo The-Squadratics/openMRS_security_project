@@ -62,6 +62,11 @@ The summary of our observations are documented below.  We used STRIDE as a means
 
 ### Repudiation
 
+Standard mitigation strategies for Repudiation typically include the following;
+* Return of last modified date for all the file passing through the servlet.
+
+OpenMRS has the feature of returning the last modified date which includes the time and date of every file which are passed through the jsp (.withjstl) servlet. This feature helps keep track of every file passing through the jsp servlet.
+
 ### Information Disclosure
 
 Standard mitigation strategies for information disclosure type threats typically include the use of data encryption that makes use of established standards and follows industry best practices for key management.
