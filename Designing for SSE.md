@@ -58,6 +58,12 @@ The summary of our observations are documented below.  We used STRIDE as a means
 
 ### Spoofing
 
+Spoofing mitigations involve strong authentication mechanisms, including complex password requirements, multi-factor authentication, re-authentication for sensitive actions, requiring HTTPS, and slow password hashes.
+
+A secure implementation of a medical record system would enforce strong password complexity requirements through the banning of common passwords and requiring long, alphanumeric passwords. Requiring a secure web transfer protocol like HTTPS should be a minimum as well. For added security, requiring multi-factor authentication as well as re-authentication when performing susceptible activities such as password changes are helpful.
+
+OpenMRS allows different configurations for password requirements, leaving the specific parameters open to the administrators to dictate. It uses secret questions set up by users for password resets. OpenMRS works with Apache Tomcat and has configurations laid out that necessitate making sure "all Tomcat applications require HTTPS to operate." OpenMRS does support use of third party authentication mechanisms, which is the only way to implement a multi-factor authentication approach. OpenMRS does not require re-authentication for sensitive administrator level changes.
+
 ### Tampering
 
 ### Repudiation
