@@ -81,11 +81,15 @@ OpenMRS has the feature of returning the last modified date which includes the t
 
 ### Information Disclosure
 
+Information disclosure allows the malicious hackers to gain insightful and confidential information about the target they want to attack just by performing basic testing, and sometimes just by looking for information in public pages.
+
 Standard mitigation strategies for information disclosure type threats typically include the use of data encryption that makes use of established standards and follows industry best practices for key management.
 
 Interactions between the front end `client` and the OpenMRS backend are handled by an API written in Java.  In our scenario, the system is set up and used on an intranet and so data isn't flowing back and forth on the open internet.
 
 Still, the API is written in such a way that any requests and associated responses are still processed using HTTPS and TLS to ensure communications are kept reasonably secure.
+
+OpenMRS provides its default authentication scheme that authenticates via DAO with OpenMRS usernames and passwords which checks against null credentials, credential equivalence problems etc. It sets the user context on the thread local so that the service layer can perform authentication/authorization checks.
 
 ### Denial of Service
 
@@ -111,7 +115,8 @@ In the context of OpenMRS, there are two different type of privilege elevation, 
 No single instance of OpenMRS will be set up exactly the same.  Still, the system has implemented robust [access controls](https://wiki.openmrs.org/display/docs/Access+Control+in+OpenMRS) that allow administrators to set and monitor how the users of the system interact with it and what data they can view and modify.
 
 These access controls are [implemented](https://wiki.openmrs.org/display/docs/Privilege+Checking+for+Access+Control+in+OpenMRS) in such a way that data requests that are initiated from the web front-end make use of specific services (AuthorizationAdvice) that will make additional calls depending on the request and perform checks using the `hasPrivilege()` methods available in most classes.
-Only after running through the various Context / User / Role checks will the data be made available.  If the user does not have access, then access will be denied. OpenMRS loads the input file using 'file.getAbsolutePath()' which installizes scripts from absolute path once the username and password are authenticated by the OpenMRS. 
+
+Only after running through the various Context / User / Role checks will the data be made available.  If the user does not have access, then access will be denied. OpenMRS loads the input file using 'file.getAbsolutePath()' which installizes scripts from absolute path once the username and password are authenticated by the OpenMRS. Also, OpenMRS contains methods for retrieving registered Serializer instances, and for persisting/retrieving/deleting objects using serialization and other such strategies to deal with deserialization, buffer overflow, type confusion etc.
 
 In this way OpenMRS is able to mitigate threats of privilege escalation within processes and data requests that occur.
 
