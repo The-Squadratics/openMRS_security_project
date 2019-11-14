@@ -66,6 +66,12 @@ OpenMRS allows different configurations for password requirements, leaving the s
 
 ### Tampering
 
+Mitigations for tampering most commonly include the santization of input data and authorization mechanisms.
+
+A secure OpenMRS program should have input validation involving datatypes, length (null terminators), character types, and format using an approved list validation approach.
+
+OpenMRS contains a Validator Module that sanitizes the input by referring to a concept dictionary with pre-approved parameters for each concept (object or field). Additionally, OpenMRS utilizes role-based and location-based access control with flags denoting required privilege levels for each module.
+
 ### Repudiation
 
 Standard mitigation strategies for Repudiation typically include the following;
