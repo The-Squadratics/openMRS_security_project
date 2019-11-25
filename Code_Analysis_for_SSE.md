@@ -25,7 +25,11 @@ The team must produce a markdown report that includes the following:
 ### Code Analysis for SSE - Code Review Strategy (Task 1)
 ---
 
-[We need to add a summary of our code review strategy here.]
+The OpenMRS core is written in Java.  The system itself has many components and is modular in the sense that it allows plug-ins to be written and used for functionality that might not be incorporated in the core or that doesn't cover a specific use case.  These plug-ins are could potentially be written in another language but would still need to interact with the core API which is, again, based on Java and uses Spring framework.  The [developer guide](https://wiki.openmrs.org/display/docs/Developer+Guide) the project hosts recommends using Eclipse and Maven when writing plug-ins and has suggestions and guides to help folks get started.
+
+Given the size and scope of this project a full manual review isn't feasible.  Our initial strategy will focus on using an automated tool to conduct the bulk of the code analysis.  There are a couple specific parts of the system that we have reviewed for other steps in this project, notably the `xxx` and `xxx`.  Those team members familiar with Java will spend some time manually reviewing those specific aspects and report back on what, if anything, they found.
+
+We spent time researching the analysis tools available for Java and found many options.  Most of them are commercial packages, though, which put them out of reach.  One package that looked promising, though, was by [SonarQube](https://www.sonarqube.org).  They offer both a commercial package but also have an open source version that should meet our need.  So for the initially testing we've chosen to use that package for our code analysis.  If it doesn't work or the reported findings seem lacking we will try another option such as [FindBugs](https://github.com/findbugsproject/findbugs) or [PMD](https://pmd.github.io).
 
 
 ### Code Analysis for SSE - Findings from Manual Code Review (Task 2) 
