@@ -74,6 +74,23 @@ As mentioned above, SQ presents a wealth of information about the code base. The
 
 ![SQ_About](https://user-images.githubusercontent.com/5983684/69763286-53315380-1132-11ea-81ab-303085b7ef79.PNG)
 
+----
+
+In addition to the `type` of issue SQ also provides a [hierarchy of severity](https://docs.sonarqube.org/latest/user-guide/issues/) when it comes to problems it finds.  The severity scale is broken down below.
+
+* **Blocker**
+  * A bug that has a high probability of impacting the behavior of the application and is in need of immediate attention.  This could include a memory leak or an unclosed database connection.
+* **Critical**
+  * A bug with a low probability of impacting the application or an issue related to a specific security flaw.  Examples include empty catch block or SQL injection.
+  * These are items that should be reviewed as soon as possible
+* **Major**
+  * These are quality flaws which could highly impact developer productive such as unused parameters, duplicate code, or blocks without test coverage.
+* **Minor**
+  * These are quality flaws that could slightly impact developer productivity and are often thought of as code consistency / convention.
+* **Info**
+  * Neither a bug nor a quality flaw, just findings about the codebase.
+
+----
 Here are some of the raw numbers the scan provided.
 
 * **Lines of Code**
@@ -95,9 +112,22 @@ Here are some of the raw numbers the scan provided.
 
 ![SQ_overview](https://user-images.githubusercontent.com/5983684/69763291-59273480-1132-11ea-816c-49daa8e128bb.PNG)
 
+----
+
 #### Specific Security Issues
 
-There were numerous issues found by the automated scan, as evidenced by the numbers presented above.
+There were numerous issues found by the automated scan, as evidenced by the numbers presented above.  A more detailed description of the issues can be found below.
+
+The issues identified can be broken down into the following severity categories.
+
+* **Blocker 204**
+* **Critical 580**
+* **Major 1.3K**
+* **Minor 2.3k**
+* **Info 171**
+
+These issues are further categorized within specific areas.  For example, SQ is able to track and map types of vulnerabilities back to specific CWEs, SANS Top 25, and the OWASP Top 10 among others.
+
 
 [Additional issues will be added here along with the associated screenshots]
 
