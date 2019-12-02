@@ -114,11 +114,11 @@ Here are some of the raw numbers the scan provided.
 
 ----
 
-#### Specific Security Issues
+#### Additional Findings
 
-There were numerous issues found by the automated scan, as evidenced by the numbers presented above.  A more detailed description of the issues can be found below.
+As mentioned above, SQ breaks down issues it finds into specific categories. The totals for the project as a whole are listed below, followed by a more specific classification.
 
-The issues identified can be broken down into the following severity categories.
+The issues identified are broken down based on the categories mentioned above.
 
 * **Blocker 204**
 * **Critical 580**
@@ -126,10 +126,57 @@ The issues identified can be broken down into the following severity categories.
 * **Minor 2.3k**
 * **Info 171**
 
-These issues are further categorized within specific areas.  For example, SQ is able to track and map types of vulnerabilities back to specific CWEs, SANS Top 25, and the OWASP Top 10 among others.
+----
 
+When looking at the `Bugs` section the tool will display the a list of what it found.  The interface presents the bug and where it is within the codebase along with additional details about when it was introduced and an estimation on how long it might take to fix.  Each one is also classified based on the definitions above.
 
-[Additional issues will be added here along with the associated screenshots]
+The breakdown for the 150 bugs it found are listed below.
+
+* **Blocker 44**
+* **Critical 9**
+* **Major 81**
+* **Minor 16**
+* **Info 0**
+
+![SQ_Issues_Bugs_Overview](https://user-images.githubusercontent.com/5983684/69997180-2f4a8500-1519-11ea-8f69-cfc6ce4a4d76.PNG)
+
+----
+
+The `Vulnerability` section follows the same layout as the `bugs` section.  Each issue is listed with links to the specific location within the codebase as well as other details.  The tool breaks down the issues into the following severity categories.
+
+* **Blocker 22**
+* **Critical 4**
+* **Major 0**
+* **Minor 97**
+* **Info 0**
+
+![issues_vulnerabilities](https://user-images.githubusercontent.com/5983684/69997296-6d47a900-1519-11ea-9f14-34c604e51dc1.PNG)
+
+----
+
+These issues are further categorized within specific areas or `Security Hotspots`.  For example, SQ is able to track and map types of vulnerabilities back to specific CWEs, SANS Top 25, and the OWASP Top 10 among others.  It uses its own classification to distinguish problems related to Authentication or weak cryptography or cross-site scripting.
+
+![SQ_Measures_SecHotspot_Overview](https://user-images.githubusercontent.com/5983684/69997218-438e8200-1519-11ea-9719-821d7222c3ed.PNG)
+
+----
+
+There are additional areas that SQ examines in addition to bugs or vulnerabilities. It also looks at the maintainability, test coverage and code duplication.  While these areas might not directly cause the application to crash or expose it to compromise, they are still very important metrics that have a large effect on how the application preforms and the ability for developers to work within it.
+
+SQ assigns a time-to-fix value for each identified issue.  The total of these is listed as `Technical Debt`.  For openMRS, the total is roughly 90 days.  Which isn't ideal but still classified as an `A` by SQ.
+
+The total text coverage available with this project is currently sitting at roughly `56.5%` with a total of `4.1K` unit tests.
+
+![SQ_Measures_Debt-Coverage_Overview](https://user-images.githubusercontent.com/5983684/69997237-4c7f5380-1519-11ea-859a-c08df00ed32c.PNG)
+
+----
+
+The code duplication was at `2.7%` with only `197` duplicate blocks. We're not sure how to conceptualize this but that seems like a small number given the overall size of the codebase.
+
+![SQ_Measures_Dupe_Overview](https://user-images.githubusercontent.com/5983684/69997251-5608bb80-1519-11ea-88d7-dbd7b3c92d73.PNG)
+
+----
+
+Overall `SonarQube` appears to be a valuable resource for most any development team.  It provides a wealth of information about the codebase, straightforward ways to classify and view that information, as well as tools for managing and iterating on the fixes necessary to improve it.
 
 
 ### Code Analysis for SSE - Summary of Key Findings from the Code Reviews (Task 4) 
