@@ -193,7 +193,9 @@ Overall `SonarQube` appears to be a valuable resource for most any development t
 ### Team Retrospective (Task 6)
 ---
 
-[We need to add a summary of our team retrospective here.]
+The team received a much needed break over the holiday but that also affected our ability to meet as a group to discuss in person the various assignments. Travis really stepped up and took the initiative to keep the progress on the project moving and breaking down the tasks in the GitHub markdown document. The workload and specific tasks for this assignment took us all off guard at first and the whole group owes Travis a big thank you for his continued effort. 
+
+We are all getting very busy towards the end of the semester which is also affecting our coordination efforts. We continue to use Slack to keep the team up to date on our current work. However, lack of in-person meetings has left us a little disoriented on our goals. We have noticed that team meetings allow us to be very honest and forward with our feelings, thoughts, and task assignements. We hope to be able to meet up soon and continue with the final push for our project to put forward the best product that we can.
 
 ### Rubric
 
