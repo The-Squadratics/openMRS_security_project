@@ -187,7 +187,7 @@ Overall `SonarQube` appears to be a valuable resource for most any development t
 ### Code Analysis for SSE - Documentation of any contact had with the OSS project (Task 5) 
 ---
 
-[We need to add documentation of any contact (pull requests, issues, discussion) had with the OpenMRS project.]
+Currently there has been no direct contact with the OpenMRS team or personnel. All of our findings have been from reviewing the GitHub codebase and the various documentation on their wiki. We hope to create pull requests with our findings soon.
 
 
 ### Team Retrospective (Task 6)
