@@ -228,6 +228,12 @@ Examples of this are instances where sections of code were flagged with _Authent
 
 There are undoubtedly many instances of this throughout the codebase but, again, when used properly the tool is doing its job calling out potential issues for developers to actually check.
 
+Furthermore, two major vulnerabilities were found while writing the content to the xml file and while getting the image file path to response. Here, in this first vulnerability "Transformer" isn't secured. So, this can be secured either by disabiling external DTDs or by enabling secure processing. Similarly, while getting the file path there is the blockage when it makes httpRequest to get file path info. This can be prevented by refactoring the code to not construct the path from tainted, user-controlled data.
+
+![sonarcube2](https://user-images.githubusercontent.com/41209887/70355502-f15ea100-1837-11ea-9ea9-41014f68eebf.JPG)
+
+![sonarcube4](https://user-images.githubusercontent.com/41209887/70355531-02a7ad80-1838-11ea-90bb-0b9da3d7026a.JPG)
+
 ----
 
 SonarQube provides standards information about all the issues it finds. It will tag issues with keywords such as CWE,CERT, OWASP, SANS or use its own classification.  This has the potential to help out the development team quite a bit when it comes time to research and correct issues and bugs.
