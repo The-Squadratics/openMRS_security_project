@@ -172,6 +172,10 @@ These issues are further categorized within specific areas or `Security Hotspots
 
 ![SQ_Measures_SecHotspot_Overview](https://user-images.githubusercontent.com/5983684/69997218-438e8200-1519-11ea-9719-821d7222c3ed.PNG)
 
+if we look at the specific file in OpenMRS i.e. openmrs/web/filter, we can see one security hotspot issue in the file StartupFilter.java
+
+![sonarcube6](https://user-images.githubusercontent.com/41209887/70353470-0a188800-1833-11ea-8178-2537a4eafd18.JPG)
+
 ----
 
 There are additional areas that SQ examines in addition to bugs or vulnerabilities. It also looks at the maintainability, test coverage and code duplication.  While these areas might not directly cause the application to crash or expose it to compromise, they are still very important metrics that have a large effect on how the application preforms and the ability for developers to work within it.
