@@ -35,6 +35,8 @@ We spent time researching the analysis tools available for Java and found many o
 ### Code Analysis for SSE - Findings from Manual Code Review (Task 2) 
 ---
 
+## CWE-1046: Creation of Immutable Text Using String Concatenation
+
 [We need to add the findings from the manual code review here.]
 
 
