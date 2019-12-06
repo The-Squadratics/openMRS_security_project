@@ -214,7 +214,7 @@ These appear to be legitimate issues and something that should be investigated b
 
 Looking at the two major bugs found in the web module, the first one has to do with the catch statement on java exception of try and catch. Whereas other major bug has to do with the date formating which is nullable in the page WebUtil.java
 
-![sonarcube5](https://user-images.githubusercontent.com/41209887/70354702-ec005700-1835-11ea-9fc9-50eef5c30405.JPG)
+![sonarcube7](https://user-images.githubusercontent.com/41209887/70354795-2833b780-1836-11ea-84c9-065d9e76138b.JPG)
 
 ----
 
