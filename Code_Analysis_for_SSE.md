@@ -192,6 +192,8 @@ Many of the main `Blockers` that were identified by SQ relate to potential DoS a
 
 ![SQ_Issues_CWE459](https://user-images.githubusercontent.com/5983684/70299066-6ccd3d80-17b9-11ea-928e-fee51eccd32f.PNG)
 
+These appear to be legitimate issues and something that should be investigated by the development team further.  What's especially concerning is the age of these specific items.  Many of them have been in the codebase for 6, 8, or even 12 years.  This is another area that we might well communicate back to the `openMRS` community.
+
 ----
 
 It's also worth pointing out that automated tools aren't to be trusted explicitly.  They are simply parsing the codebase and applying a rule set as best it can.  And the documentation for SQ is clear when pointing this out.  They reiterate that many types of items flagged should be manually reviewed to verify an issue actually exists.
