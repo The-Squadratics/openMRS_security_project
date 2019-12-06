@@ -182,7 +182,41 @@ Overall `SonarQube` appears to be a valuable resource for most any development t
 ### Code Analysis for SSE - Summary of Key Findings from the Code Reviews (Task 4) 
 ---
 
-[We need to add a summary of the key findings from the various code reviews here, including links and mappings to CWEs, CAPECs and so on.]
+#### Automated Code Analysis - Summary
+
+Analyzing a large code base such as `openMRS` is challenging.  It's nearly impossible to do so manually which is where automated tools like `SonarQube` come into play.  It enables development teams to define the rules and heuristics they want to use to determine overall code quality and can then integrate a tool like SQ into the pipeline and use it to manage any issues that crop up.
+
+Our analysis has shown that in general, `openMRS` doesn't suffer from any glaring issues based on the default rules and settings used during our scan.  It `Passed` for what that's worth.  As mentioned in the findings section, though, there are a number of **Bugs** and potential **Vulnerabilities** that need to be reviewed and addressed.
+
+Many of the main `Blockers` that were identified by SQ relate to potential DoS attacks.  These can be mapped back to [CWE-459 - Incomplete Cleanup](https://cwe.mitre.org/data/definitions/459.html) as well as [CWE-609 - Double-Checked Locking](https://cwe.mitre.org/data/definitions/609.html).  The first has to do with the use of _Stream Resources_ and temporary files creation.  Failing to close connections could lead to these files growing larger than the space allocated for them, causing a Denial of Service.
+
+----
+
+It's also worth pointing out that automated tools aren't to be trusted explicitly.  They are simply parsing the codebase and applying a rule set as best it can.  And the documentation for SQ is clear when pointing this out.  They reiterate that many types of items flagged should be manually reviewed to verify an issue actually exists.
+
+Examples of this are instances where sections of code were flagged with _Authentication_ issues and tagged referencing [CWE-259 - Hard-coded Passwords](https://cwe.mitre.org/data/definitions/259.html).  In reviewing these sections we found that there were no actual credentials used but that a variable name simple contained the word, password.
+
+`public static final string GP_PASSWORD_CUSTOM_REGEX = "security.passwordCustomRegex";`
+
+There are undoubtedly many instances of this throughout the codebase but, again, when used properly the tool is doing its job calling out potential issues for developers to actually check.
+
+----
+
+The following were the most reported CWEs based on the automated analysis.
+
+* [CWE-493 - Critical Public Variable Without FINAL Modifier](https://cwe.mitre.org/data/definitions/493.html)
+* [CWE-409 - Improper Handling of Highly Compressed Data](https://cwe.mitre.org/data/definitions/409.html)
+* [CWE-326 - Inadequate Encryption Strength](https://cwe.mitre.org/data/definitions/326.html)
+* [CWE-20 - Improper Input Validation](https://cwe.mitre.org/data/definitions/20.html)
+* [CWE-327 - Use of a Broken or Risky Cryptographic Algorithm](https://cwe.mitre.org/data/definitions/327.html)
+
+Even though there were only a couple instances of the last item listed, CWE-327, that item is something we plan to bring to the attention of the `openMRS` development team. It could be a relatively quick fix and something that has a tangible impact on the security of the software as a whole.
+
+----
+
+#### Manual Code Review - Summary
+
+[We need to add a summary of the key findings from any manual code reviews here, including links and mappings to CWEs, CAPECs and so on.]
 
 ### Code Analysis for SSE - Documentation of any contact had with the OSS project (Task 5) 
 ---
