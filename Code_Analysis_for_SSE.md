@@ -36,7 +36,7 @@ We spent time researching the analysis tools available for Java and found many o
 
 #### CWE-1046: Creation of Immutable Text Using String Concatenation
 
-It looks like there is lot of use of string concatenation in the page [WebModuleUtil.java](https://github.com/openmrs/openmrs-core/blob/master/web/src/main/java/org/openmrs/module/web/WebModuleUtil.java) instate use of format specifier in the webModuleUtil page. Therefore, this webModuleUtil.java file seems to have CWE-1046 issue.
+It looks like there is lot of use of string concatenation in the page [WebModuleUtil.java](https://github.com/openmrs/openmrs-core/blob/master/web/src/main/java/org/openmrs/module/web/WebModuleUtil.java) instate use of format specifier in the webModuleUtil page(i.e. log.error(), log.debug() etc.). Therefore, this webModuleUtil.java file seems to have CWE-1046 issue.
 
 ---
 
