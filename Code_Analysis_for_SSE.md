@@ -190,9 +190,13 @@ Our analysis has shown that in general, `openMRS` doesn't suffer from any glarin
 
 Many of the main `Blockers` that were identified by SQ relate to potential DoS attacks.  These can be mapped back to [CWE-459 - Incomplete Cleanup](https://cwe.mitre.org/data/definitions/459.html) as well as [CWE-609 - Double-Checked Locking](https://cwe.mitre.org/data/definitions/609.html).  The first has to do with the use of _Stream Resources_ and temporary files creation.  Failing to close connections could lead to these files growing larger than the space allocated for them, causing a Denial of Service.
 
+![SQ_Issues_CWE459](https://user-images.githubusercontent.com/5983684/70299066-6ccd3d80-17b9-11ea-928e-fee51eccd32f.PNG)
+
 ----
 
 It's also worth pointing out that automated tools aren't to be trusted explicitly.  They are simply parsing the codebase and applying a rule set as best it can.  And the documentation for SQ is clear when pointing this out.  They reiterate that many types of items flagged should be manually reviewed to verify an issue actually exists.
+
+![SQ_Issues_CWE-259](https://user-images.githubusercontent.com/5983684/70298861-bf5a2a00-17b8-11ea-9dcf-a82afb929e80.PNG)
 
 Examples of this are instances where sections of code were flagged with _Authentication_ issues and tagged referencing [CWE-259 - Hard-coded Passwords](https://cwe.mitre.org/data/definitions/259.html).  In reviewing these sections we found that there were no actual credentials used but that a variable name simple contained the word, password.
 
@@ -201,6 +205,8 @@ Examples of this are instances where sections of code were flagged with _Authent
 There are undoubtedly many instances of this throughout the codebase but, again, when used properly the tool is doing its job calling out potential issues for developers to actually check.
 
 ----
+
+![SQ_Issues_CWE-493](https://user-images.githubusercontent.com/5983684/70298868-c5500b00-17b8-11ea-95f1-6bbb9f50f88f.PNG)
 
 The following were the most reported CWEs based on the automated analysis.
 
