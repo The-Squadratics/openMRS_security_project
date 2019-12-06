@@ -146,6 +146,10 @@ The breakdown for the 150 bugs it found are listed below.
 
 ![SQ_Issues_Bugs_Overview](https://user-images.githubusercontent.com/5983684/69997180-2f4a8500-1519-11ea-8f69-cfc6ce4a4d76.PNG)
 
+Moreover, when looking at the specific file ModuleResourcesServlet.java in the web modeule we encountered 67 bugs which directly affectst the file upload. One of the major issue that implied here was nullable moduleId. 
+
+![sonarcube1](https://user-images.githubusercontent.com/41209887/70352387-a9884b80-1830-11ea-9cb1-a53e8bec27fa.JPG)
+
 ----
 
 The `Vulnerability` section follows the same layout as the `bugs` section.  Each issue is listed with links to the specific location within the codebase as well as other details.  The tool breaks down the issues into the following severity categories.
