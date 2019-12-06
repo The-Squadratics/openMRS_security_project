@@ -59,6 +59,12 @@ Once we managed to build `openMRS` the SQ scan was relatively easy.  There were 
 
 Ideally we'd be able to simply provide a public link to the results of our automated analysis.  Unfortunately getting all this set up and built on an external server would present too many challenges.  As a result we've taken screen shots of the relevant and representative portions of the web interface and presented them below with comments.  We'd be happy to provide additional information if necessary.
 
+#### SonarCloud
+
+When our initial automated analysis was run we were unaware of [SonarCloud](https://sonarcloud.io/about).  We've since gone back and checked and the `openMRS` codebase was scanned last year and the output / findings are similar to our own.
+
+That scan can be [found here](https://sonarcloud.io/dashboard?id=OMC).
+
 #### SonarQube Findings
 
 As mentioned above, SQ presents a wealth of information about the code base. The basic categories they provide are broken down below.
@@ -208,9 +214,11 @@ There are undoubtedly many instances of this throughout the codebase but, again,
 
 ----
 
-![SQ_Issues_CWE-493](https://user-images.githubusercontent.com/5983684/70298868-c5500b00-17b8-11ea-95f1-6bbb9f50f88f.PNG)
+SonarQube provides standards information about all the issues it finds. It will tag issues with keywords such as CWE,CERT, OWASP, SANS or use its own classification.  This has the potential to help out the development team quite a bit when it comes time to research and correct issues and bugs.
 
 The following were the most reported CWEs based on the automated analysis.
+
+![SQ_Issues_CWE-493](https://user-images.githubusercontent.com/5983684/70298868-c5500b00-17b8-11ea-95f1-6bbb9f50f88f.PNG)
 
 * [CWE-493 - Critical Public Variable Without FINAL Modifier](https://cwe.mitre.org/data/definitions/493.html)
 * [CWE-409 - Improper Handling of Highly Compressed Data](https://cwe.mitre.org/data/definitions/409.html)
