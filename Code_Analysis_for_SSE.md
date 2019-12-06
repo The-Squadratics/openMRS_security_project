@@ -162,6 +162,10 @@ The `Vulnerability` section follows the same layout as the `bugs` section.  Each
 
 ![issues_vulnerabilities](https://user-images.githubusercontent.com/5983684/69997296-6d47a900-1519-11ea-9f14-34c604e51dc1.PNG)
 
+Here, looking at the web module of the OpenMRS, we can see three Vulnerability. Out of which two are the minor vulnerability where as one is the major vulnerability encountered. 
+
+![sonarcube5](https://user-images.githubusercontent.com/41209887/70352962-ee60b200-1831-11ea-8461-fba7a11efd5f.JPG)
+
 ----
 
 These issues are further categorized within specific areas or `Security Hotspots`.  For example, SQ is able to track and map types of vulnerabilities back to specific CWEs, SANS Top 25, and the OWASP Top 10 among others.  It uses its own classification to distinguish problems related to Authentication or weak cryptography or cross-site scripting.
