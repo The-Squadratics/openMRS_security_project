@@ -146,7 +146,7 @@ The breakdown for the 150 bugs it found are listed below.
 
 ![SQ_Issues_Bugs_Overview](https://user-images.githubusercontent.com/5983684/69997180-2f4a8500-1519-11ea-8f69-cfc6ce4a4d76.PNG)
 
-Moreover, when looking at the specific file ModuleResourcesServlet.java in the web modeule we encountered 67 bugs which directly affectst the file upload. One of the major issue that implied here was nullable moduleId. 
+Moreover, when looking at the specific file ModuleResourcesServlet.java in the web module we found 67 issues which directly affects the file upload. One of the major issue that implied here was nullable moduleId. Furtherover, if we look at the bugs in the web module two major bugs were encountered
 
 ![sonarcube1](https://user-images.githubusercontent.com/41209887/70352387-a9884b80-1830-11ea-9cb1-a53e8bec27fa.JPG)
 
@@ -211,6 +211,10 @@ Many of the main `Blockers` that were identified by SQ relate to potential DoS a
 ![SQ_Issues_CWE459](https://user-images.githubusercontent.com/5983684/70299066-6ccd3d80-17b9-11ea-928e-fee51eccd32f.PNG)
 
 These appear to be legitimate issues and something that should be investigated by the development team further.  What's especially concerning is the age of these specific items.  Many of them have been in the codebase for 6, 8, or even 12 years.  This is another area that we might well communicate back to the `openMRS` community.
+
+Looking at the two major bugs found in the web module, the first one has to do with the catch statement on java exception of try and catch. Whereas other major bug has to do with the date formating which is nullable in the page WebUtil.java
+
+![sonarcube5](https://user-images.githubusercontent.com/41209887/70354702-ec005700-1835-11ea-9fc9-50eef5c30405.JPG)
 
 ----
 
