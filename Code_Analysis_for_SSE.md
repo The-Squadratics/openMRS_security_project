@@ -257,10 +257,15 @@ There are two ways to use the SWAMP: the ready-to-use cloud computing platform a
   * Info: 7 
 * Standards:
   * CWE - 388: 7PK - Errors
+    * This category represents one of the phyla in the Seven Pernicious Kingdoms vulnerability classification. It includes weaknesses that occur when an application does not properly handle errors that occur during processing.
   * CWE - 398: 7PK - Code Quality
-    * It checks that certain exception types do not appear in a `catch` statement.Catching overly broad exceptions promotes complex error handling code that is more likely to contain security vulnerabilities. Catching `java.lang.Exception`, `java.lang.Error` or `java.lang.RuntimeException` is almost never acceptable. Novice developers often simply catch Exception in an attempt to handle multiple exception classes. This unfortunately leads to code that inadvertently catches NullPointerException, OutOfMemoryError, etc.
+    * This checks that certain exception types do not appear in a `catch` statement.Catching overly broad exceptions promotes complex error handling code that is more likely to contain security vulnerabilities. Catching `java.lang.Exception`, `java.lang.Error` or `java.lang.RuntimeException` is almost never acceptable. Novice developers often simply catch Exception in an attempt to handle multiple exception classes. This unfortunately leads to code that inadvertently catches NullPointerException, OutOfMemoryError, etc.
   * CWE - 399: Resource Management Errors
+    * This metric measures the number of instantiations of other classes within the given class. This type of coupling is not caused by inheritance or the object oriented paradigm. 
   * CWE - 454: External Initializations of Trusted Variables
+    * This checks that a class which has only private constructors is declared as final. The software initializes critical internal variables or data stores using inputs that can be modified by untrusted actors. A software system should be reluctant to trust variables that have been initialized outside of its trust boundary, especially if they are initialized by users. The variables may have been initialized incorrectly. If an attacker can initialize the variable, then they can influence what the vulnerable system will do.
+  
+  ---
   
 * Spot Bugs Report: [OpenMRS (Spot Bugs) Report.pdf](https://github.com/The-Squadratics/openMRS_security_project/files/3934808/OpenMRS.Spot.Bugs.Report.pdf)
 
@@ -278,10 +283,15 @@ There are two ways to use the SWAMP: the ready-to-use cloud computing platform a
   * Low: 56 
 * Standards:
   * CWE - 22: Improper Limitation of a Pathname to a Restricted Directory
+    * A file is opened to read its content. The filename comes from an `input` parameter. If an unfiltered parameter is passed to this file API, files from an arbitrary filesystem location could be read. This rule identifies `potential` path traversal vulnerabilities. In many cases, the constructed file path cannot be controlled by the user. If that is the case, the reported instance is a false positive.
   * CWE - 91: XML Injection
+    * XML External Entity (XXE) attacks can occur when an XML parser supports XML entities while processing XML received from an untrusted source. The software processes an XML document that can contain XML entities with URIs that resolve to documents outside of the intended sphere of control, causing the product to embed incorrect documents into its output.
   * CWE - 117: Improper Output Neutralization for Logs
+    * When data from an untrusted source is put into a logger and not neutralized correctly, an attacker could forge log entries or include malicious content. Inserted false entries could be used to skew statistics, distract the administrator or even to implicate another party in the commission of a malicious act. If the log file is processed automatically, the attacker can render the file unusable by corrupting the format of the file or injecting unexpected characters.
   * CWE - 227: 7PK - API Abuse
+    * This Serializable class defines a non-primitive instance field which is neither transient, Serializable, or `java.lang.Object`, and does not appear to implement the `Externalizable` interface or the `readObject()` and `writeObject()` methods.  Objects of this class will not be deserialized correctly if a non-Serializable object is stored in this field.
   * CWE - 252: Unchecked Return Value
+    * This method returns a value that is not checked. The return value should be checked since it can indicate an unusual or unexpected function execution. For example, the `File.delete()` method returns false if the file could not be successfully deleted (rather than throwing an Exception). If you don't check the result, you won't notice if the method invocation signals unexpected behavior by returning an atypical return value.
   
 
 ### Code Analysis for SSE - Summary of Key Findings from the Code Reviews (Task 4) 
