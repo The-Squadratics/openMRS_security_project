@@ -37,40 +37,42 @@ We adopted Scenario-based strategy. We utilized our previously created Assurance
 
 For the first manual code review, we reviewed the code for web module utility file which performs the web app specific startup needs for modules. Below are the issues we found after manual code review of some files in web module folder:
 
-## Potential path traversal
+##### Potential path traversal
 
 Web applications occasionally use parameter values to store the location of a file which will later be required by the server. A path traversal occurs when the parameter value (ie. path to file being called by the server) can be substituted with the relative path of another resource which is located outside of the applications working directory. The server then loads the resource and includes its contents in the response to the client.
 
 We found that there are several potential path traversals such as on lines 178, 291, 685, 946 of [WebModuleUtil.java](https://github.com/openmrs/openmrs-core/blob/master/web/src/main/java/org/openmrs/module/web/WebModuleUtil.java) file.
 
-## Illegal catch statements
+##### Illegal catch statements
 
 Catching overly broad exceptions promotes complex error handling code that is more likely to contain security vulnerabilities. Multiple catch blocks can get ugly and repetitive, but "condensing" catch blocks by catching a high-level class like Exception can obscure exceptions that deserve special treatment or that should not be caught at this point in the program. 
 
 We found some catch statements for generic exceptions such as on lines 315, 327, 475, 589 of [WebModuleUtil.java](https://github.com/openmrs/openmrs-core/blob/master/web/src/main/java/org/openmrs/module/web/WebModuleUtil.java) file. 
 
-## Type casting issue 
+##### Type casting issue 
 
 We found several box casting issues where the types were casted for no apparent reason like lines 54, 63, 106 of [ModuleResourcesServlet.java](https://github.com/openmrs/openmrs-core/blob/master/web/src/main/java/org/openmrs/module/web/ModuleResourcesServlet.java) file.
+
+The related CWEs and the category of risks along with tool category are discussed in the below `SWAMP - Findings` section. 
 
 --- 
 
 For the second manual code review, while reviewing the code of OpenMRS using misuse case of file Upload, certain files were found which includes files like: webModuleUtil.java, moduleServlet.java and [StartupErrorFilter.java](https://github.com/openmrs/openmrs-core/blob/4a0feb8da351088f25fdc4e6d324a1f277aa3410/web/src/main/java/org/openmrs/web/filter/startuperror/StartupErrorFilter.java). For example the file startupErrorFilter.java show the apache module that are expected when installing and running the system where as other two files deals with the file upload and the file path as well as making http request. After carefully reviewing the code in each file certain issues were found that relates to the filepath, fileuploads and making httprequest. This issues directly links to the certain CWE ID which directly or to some extent impacts the system. Each CWE ID has its own software errors and after carefully reviewing the code and the CWE ID each issue found in the code was matched up with the CWE ID.
 
-* CWE-1046: Creation of Immutable Text Using String Concatenation
+##### CWE-1046: Creation of Immutable Text Using String Concatenation
 
 It looks like there is lot of use of string concatenation in the page [WebModuleUtil.java](https://github.com/openmrs/openmrs-core/blob/master/web/src/main/java/org/openmrs/module/web/WebModuleUtil.java) instate use of format specifier in the webModuleUtil page(i.e. log.error(), log.debug() etc.). Therefore, this webModuleUtil.java file seems to have CWE-1046 issue.
 
 
-* CWE-404: Improper Resource Shutdown or Release
+##### CWE-404: Improper Resource Shutdown or Release
 
 If we look at the code in the page [WebModuleUtil.java](https://github.com/openmrs/openmrs-core/blob/master/web/src/main/java/org/openmrs/module/web/WebModuleUtil.java) we can see closing code has been kept in try so when the exception occurs the resources doesn't get closed properly. so, try should be replaced with try-with-resources.
 
-* CWE-1052: Excessive Use of Hard-Coded Literals in Initialization
+##### CWE-1052: Excessive Use of Hard-Coded Literals in Initialization
 
 frequent use of hard-coded literals have been found in the [WebModuleUtil.java](https://github.com/openmrs/openmrs-core/blob/master/web/src/main/java/org/openmrs/module/web/WebModuleUtil.java) instead of defining a constant which seems to have CWE-1052 issue.
 
-* CWE-149: Improper Neutralization of Quoting Syntax
+##### CWE-149: Improper Neutralization of Quoting Syntax
 
 use of double quotes to use the indexOf(char) method in [moduleServlet.java](https://github.com/openmrs/openmrs-core/blob/master/web/src/main/java/org/openmrs/module/web/ModuleServlet.java) instate of single quote. Single quote around '/' helps use of indexOf(char) method faster. This improper use of quote seems to have CWE-149 issue.
 
