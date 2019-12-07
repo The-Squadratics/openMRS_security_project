@@ -47,6 +47,10 @@ If we look at the code in the page [WebModuleUtil.java](https://github.com/openm
 
 frequent use of hard-coded literals have been found in the [WebModuleUtil.java](https://github.com/openmrs/openmrs-core/blob/master/web/src/main/java/org/openmrs/module/web/WebModuleUtil.java) instead of defining a constant which seems to have CWE-1052 issue.
 
+#### CWE-149: Improper Neutralization of Quoting Syntax
+
+use of double quotes to use the indexOf(char) method in [moduleServlet.java](https://github.com/openmrs/openmrs-core/blob/master/web/src/main/java/org/openmrs/module/web/ModuleServlet.java) instate of single quote. Single quote around '/' helps use of indexOf(char) method faster. This improper use of quote seems to have CWE-149 issue.
+
 ---
 
 [We need to add the findings from the manual code review here.]
