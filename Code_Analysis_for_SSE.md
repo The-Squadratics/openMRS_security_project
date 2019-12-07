@@ -32,24 +32,24 @@ Given the size and scope of this project a full manual review isn't feasible. Fo
 We adopted Scenario-based strategy. We utilized our previously created Assurance cases and Misuse cases to identify data flows and potentially vulnerable areas of the OpenMRS in Web Utils folder as well as Web Filter folder by doing a manual code review. We spent time researching the analysis tools available for Java and found many options.  Most of them are commercial packages, though, which put them out of reach.  One package that looked promising was by [SonarQube](https://www.sonarqube.org). They offer both a commercial package but also have an open source (`Community`) version that should meet our need. For the initial automated testing, we've chosen to use OpenMRS core package for our code analysis.  If it doesn't work or the reported findings seem lacking we will try another option such as [FindBugs](https://github.com/findbugsproject/findbugs) or [PMD](https://pmd.github.io). The  other testing tool we used for code review of Web Utilities was [SWAMP](https://continuousassurance.org/). The SWAMP is a publicly available, open source, no-cost service for continuous software assurance and static code analysis. These tools were mainly used to identify potential security concerns and general flaws with the source code that could cause problems with the software. Both the automated and manual code review process was focused on finding potential security flaws based on the requirements that we have outlined in our misuse cases, assurance cases, and threat models.
 
 
-
 ### Code Analysis for SSE - Findings from Manual Code Review (Task 2) 
+---
 
 For the first manual code review, we reviewed the code for web module utility file which performs the web app specific startup needs for modules. Below are the issues we found after manual code review of some files in web module folder:
 
-* Potential path traversal
+## Potential path traversal
 
 Web applications occasionally use parameter values to store the location of a file which will later be required by the server. A path traversal occurs when the parameter value (ie. path to file being called by the server) can be substituted with the relative path of another resource which is located outside of the applications working directory. The server then loads the resource and includes its contents in the response to the client.
 
 We found that there are several potential path traversals such as on lines 178, 291, 685, 946 of [WebModuleUtil.java](https://github.com/openmrs/openmrs-core/blob/master/web/src/main/java/org/openmrs/module/web/WebModuleUtil.java) file.
 
-* Illegal catch statements
+## Illegal catch statements
 
 Catching overly broad exceptions promotes complex error handling code that is more likely to contain security vulnerabilities. Multiple catch blocks can get ugly and repetitive, but "condensing" catch blocks by catching a high-level class like Exception can obscure exceptions that deserve special treatment or that should not be caught at this point in the program. 
 
 We found some catch statements for generic exceptions such as on lines 315, 327, 475, 589 of [WebModuleUtil.java](https://github.com/openmrs/openmrs-core/blob/master/web/src/main/java/org/openmrs/module/web/WebModuleUtil.java) file. 
 
-* Type casting issue 
+## Type casting issue 
 
 We found several box casting issues where the types were casted for no apparent reason like lines 54, 63, 106 of [ModuleResourcesServlet.java](https://github.com/openmrs/openmrs-core/blob/master/web/src/main/java/org/openmrs/module/web/ModuleResourcesServlet.java) file.
 
