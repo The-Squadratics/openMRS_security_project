@@ -53,7 +53,7 @@ use of double quotes to use the indexOf(char) method in [moduleServlet.java](htt
 
 ---
 
-[We need to add the findings from the manual code review here.]
+While reviewing the code of OpenMRS using misuse case of file Upload, certain files were found which includes files like: webModuleUtil.java, moduleServlet.java and [StartupErrorFilter.java](https://github.com/openmrs/openmrs-core/blob/4a0feb8da351088f25fdc4e6d324a1f277aa3410/web/src/main/java/org/openmrs/web/filter/startuperror/StartupErrorFilter.java). For example the file startupErrorFilter.java show the apache module that are expected when installing and running the system where as other two files deals with the file upload and the file path as well as making http request. After carefully reviewing the code in each file certain issues were found that relates to the filepath, fileuploads and making httprequest. This issues directly links to the certain CWE ID which directly or to some extent impacts the system. Each CWE ID has its own software errors and after carefully reviewing the code and the CWE ID each issue found in the code was matched up with the CWE ID.
 
 
 ### Code Analysis for SSE - Findings from Automated Code Scanning (Task 3) 
