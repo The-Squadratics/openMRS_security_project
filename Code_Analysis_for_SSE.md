@@ -243,7 +243,14 @@ There are two ways to use the SWAMP: the ready-to-use cloud computing platform a
 
 #### SWAMP - Findings
 
-
+* Codacy Report 
+* Total issues:	
+* Categories:
+  * Security: 
+  * Error Prone:	
+  * Code Style:	
+  * Unused Code:	
+* Overall code grade: 
 
 ### Code Analysis for SSE - Summary of Key Findings from the Code Reviews (Task 4) 
 ---
