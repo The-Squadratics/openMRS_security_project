@@ -243,14 +243,45 @@ There are two ways to use the SWAMP: the ready-to-use cloud computing platform a
 
 #### SWAMP - Findings
 
-* Codacy Report 
-* Total issues:	
-* Categories:
-  * Security: 
-  * Error Prone:	
-  * Code Style:	
-  * Unused Code:	
-* Overall code grade: 
+* Checkstyle PMD Report [OpenMRS (Checkstyle PMD) Report.pdf](https://github.com/The-Squadratics/openMRS_security_project/files/3934807/OpenMRS.Checkstyle.PMD.Report.pdf)
+
+* Total issues: 139	
+* Rules:
+  * Error handling: 8 
+  * Resource Management: 1	
+  * Others:	130
+* Severity:
+  * High: 39 
+  * Medium: 88 
+  * Low: 5 
+  * Info: 7 
+* Standards:
+  * CWE - 388: 7PK - Errors
+  * CWE - 398: 7PK - Code Quality
+  * CWE - 399: Resource Management Errors
+  * CWE - 454: External Initializations of Trusted Variables
+  
+* Spot Bugs Report [OpenMRS (Spot Bugs) Report.pdf](https://github.com/The-Squadratics/openMRS_security_project/files/3934808/OpenMRS.Spot.Bugs.Report.pdf)
+
+* Total issues: 81	
+* Rules:
+  * API Abuse: 2
+  * Log Forging: 9	
+  * Path Traversal: 9	
+  * Return Value: 3	
+  * XML Injection: 1	
+  * Others:	57
+* Severity:
+  * High: 2 
+  * Medium: 23 
+  * Low: 56 
+* Standards:
+  * CWE - 22: Improper Limitation of a Pathname to a Restricted Directory
+  * CWE - 91: XML Injection
+  * CWE - 117: Improper Output Neutralization for Logs
+  * CWE - 227: 7PK - API Abuse
+  * CWE - 252: Unchecked Return Value
+  
 
 ### Code Analysis for SSE - Summary of Key Findings from the Code Reviews (Task 4) 
 ---
