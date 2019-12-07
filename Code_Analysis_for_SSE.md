@@ -243,7 +243,7 @@ There are two ways to use the SWAMP: the ready-to-use cloud computing platform a
 
 #### SWAMP - Findings
 
-* Checkstyle PMD Report [OpenMRS (Checkstyle PMD) Report.pdf](https://github.com/The-Squadratics/openMRS_security_project/files/3934807/OpenMRS.Checkstyle.PMD.Report.pdf)
+* Checkstyle PMD Report: [OpenMRS (Checkstyle PMD) Report.pdf](https://github.com/The-Squadratics/openMRS_security_project/files/3934807/OpenMRS.Checkstyle.PMD.Report.pdf)
 
 * Total issues: 139	
 * Rules:
@@ -258,10 +258,11 @@ There are two ways to use the SWAMP: the ready-to-use cloud computing platform a
 * Standards:
   * CWE - 388: 7PK - Errors
   * CWE - 398: 7PK - Code Quality
+    * It checks that certain exception types do not appear in a `catch` statement.Catching overly broad exceptions promotes complex error handling code that is more likely to contain security vulnerabilities. Catching `java.lang.Exception`, `java.lang.Error` or `java.lang.RuntimeException` is almost never acceptable. Novice developers often simply catch Exception in an attempt to handle multiple exception classes. This unfortunately leads to code that inadvertently catches NullPointerException, OutOfMemoryError, etc.
   * CWE - 399: Resource Management Errors
   * CWE - 454: External Initializations of Trusted Variables
   
-* Spot Bugs Report [OpenMRS (Spot Bugs) Report.pdf](https://github.com/The-Squadratics/openMRS_security_project/files/3934808/OpenMRS.Spot.Bugs.Report.pdf)
+* Spot Bugs Report: [OpenMRS (Spot Bugs) Report.pdf](https://github.com/The-Squadratics/openMRS_security_project/files/3934808/OpenMRS.Spot.Bugs.Report.pdf)
 
 * Total issues: 81	
 * Rules:
@@ -336,11 +337,6 @@ The following were the most reported CWEs based on the automated analysis.
 
 Even though there were only a couple instances of the last item listed, CWE-327, that item is something we plan to bring to the attention of the `openMRS` development team. It could be a relatively quick fix and something that has a tangible impact on the security of the software as a whole.
 
-----
-
-#### Manual Code Review - Summary
-
-[We need to add a summary of the key findings from any manual code reviews here, including links and mappings to CWEs, CAPECs and so on.]
 
 ### Code Analysis for SSE - Documentation of any contact had with the OSS project (Task 5) 
 ---
