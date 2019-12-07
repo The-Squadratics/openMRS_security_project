@@ -43,7 +43,9 @@ It looks like there is lot of use of string concatenation in the page [WebModule
 
 If we look at the code in the page [WebModuleUtil.java](https://github.com/openmrs/openmrs-core/blob/master/web/src/main/java/org/openmrs/module/web/WebModuleUtil.java) we can see closing code has been kept in try so when the exception occurs the resources doesn't get closed properly. so, try should be replaced with try-with-resources.
 
+#### CWE-1052: Excessive Use of Hard-Coded Literals in Initialization
 
+frequent use of hard-coded literals have been found in the [WebModuleUtil.java](https://github.com/openmrs/openmrs-core/blob/master/web/src/main/java/org/openmrs/module/web/WebModuleUtil.java) instead of defining a constant which seems to have CWE-1052 issue.
 
 ---
 
