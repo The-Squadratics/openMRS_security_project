@@ -38,6 +38,13 @@ We spent time researching the analysis tools available for Java and found many o
 
 It looks like there is lot of use of string concatenation in the page [WebModuleUtil.java](https://github.com/openmrs/openmrs-core/blob/master/web/src/main/java/org/openmrs/module/web/WebModuleUtil.java) instate use of format specifier in the webModuleUtil page(i.e. log.error(), log.debug() etc.). Therefore, this webModuleUtil.java file seems to have CWE-1046 issue.
 
+
+#### CWE-404: Improper Resource Shutdown or Release
+
+If we look at the code in the page [WebModuleUtil.java](https://github.com/openmrs/openmrs-core/blob/master/web/src/main/java/org/openmrs/module/web/WebModuleUtil.java) we can see closing code has been kept in try so when the exception occurs the resources doesn't get closed properly. so, try should be replaced with try-with-resources.
+
+
+
 ---
 
 [We need to add the findings from the manual code review here.]
