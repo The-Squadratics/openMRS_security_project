@@ -29,7 +29,11 @@ The OpenMRS core is written in Java.  The system itself has many components and 
 
 Given the size and scope of this project a full manual review isn't feasible. For the code review of OpenMRS, we decided to use both an automated and manual analysis approach. Our initial strategy will focus on using an automated tool to conduct the bulk of the code analysis. There are a couple specific parts of the system that we have reviewed for other steps in this project, notably the Web Utils and Web Filter. Those team members familiar with Java will spend some time manually reviewing those specific aspects and report back on what, if anything, they found.
  
-We adopted Scenario-based strategy. We utilized our previously created Assurance cases and Misuse cases to identify data flows and potentially vulnerable areas of the OpenMRS in Web Utils folder as well as Web Filter folder by doing a manual code review. We spent time researching the analysis tools available for Java and found many options.  Most of them are commercial packages, though, which put them out of reach.  One package that looked promising was by [SonarQube](https://www.sonarqube.org). They offer both a commercial package but also have an open source (`Community`) version that should meet our need. For the initial automated testing, we've chosen to use OpenMRS core package for our code analysis.  If it doesn't work or the reported findings seem lacking we will try another option such as [FindBugs](https://github.com/findbugsproject/findbugs) or [PMD](https://pmd.github.io). The  other testing tool we used for code review of Web Utilities was [SWAMP](https://continuousassurance.org/). The SWAMP is a publicly available, open source, no-cost service for continuous software assurance and static code analysis. These tools were mainly used to identify potential security concerns and general flaws with the source code that could cause problems with the software. Both the automated and manual code review process was focused on finding potential security flaws based on the requirements that we have outlined in our misuse cases, assurance cases, and threat models.
+We adopted Scenario-based strategy. We utilized our previously created Assurance cases and Misuse cases to identify data flows and potentially vulnerable areas of the OpenMRS in Web Utils folder as well as Web Filter folder by doing a manual code review.
+
+We spent time researching the analysis tools available for Java and found many options.  Most of them are commercial packages, though, which put them out of reach.  One package that looked promising was by [SonarQube](https://www.sonarqube.org). They offer both a commercial package but also have an open source (`Community`) version that should meet our need. For the initial automated testing, we've chosen to use OpenMRS core package for our code analysis.  If it doesn't work or the reported findings seem lacking we will try another option such as [FindBugs](https://github.com/findbugsproject/findbugs) or [PMD](https://pmd.github.io) or other tools.
+
+The  other testing tool we ended up using for code review of Web Utilities was [SWAMP](https://continuousassurance.org/). The SWAMP is a publicly available, open source, no-cost service for continuous software assurance and static code analysis. These tools were mainly used to identify potential security concerns and general flaws with the source code that could cause problems with the software. Both the automated and manual code review process was focused on finding potential security flaws based on the requirements that we have outlined in our misuse cases, assurance cases, and threat models.
 
 
 ### Code Analysis for SSE - Findings from Manual Code Review (Task 2) 
@@ -57,7 +61,7 @@ The related CWEs and the category of risks along with tool category are discusse
 
 --- 
 
-For the second manual code review, while reviewing the code of OpenMRS using misuse case of file Upload, certain files were found which includes files like: webModuleUtil.java, moduleServlet.java and [StartupErrorFilter.java](https://github.com/openmrs/openmrs-core/blob/4a0feb8da351088f25fdc4e6d324a1f277aa3410/web/src/main/java/org/openmrs/web/filter/startuperror/StartupErrorFilter.java). For example the file startupErrorFilter.java show the apache module that are expected when installing and running the system where as other two files deals with the file upload and the file path as well as making http request. After carefully reviewing the code in each file certain issues were found that relates to the filepath, fileuploads and making httprequest. This issues directly links to the certain CWE ID which directly or to some extent impacts the system. Each CWE ID has its own software errors and after carefully reviewing the code and the CWE ID each issue found in the code was matched up with the CWE ID.
+For the second manual code review, while reviewing the code of OpenMRS using misuse case of file Upload, certain files were found which includes files like: webModuleUtil.java, moduleServlet.java and [StartupErrorFilter.java](https://github.com/openmrs/openmrs-core/blob/4a0feb8da351088f25fdc4e6d324a1f277aa3410/web/src/main/java/org/openmrs/web/filter/startuperror/StartupErrorFilter.java). For example the file startupErrorFilter.java show the apache module that are expected when installing and running the system where as other two files deals with the file upload and the file path as well as making `http` request. After carefully reviewing the code in each file certain issues were found that relates to the filepath, fileuploads and making httprequest. This issues directly links to the certain CWE ID which directly or to some extent impacts the system. Each CWE ID has its own software errors and after carefully reviewing the code and the CWE ID each issue found in the code was matched up with the CWE ID.
 
 ##### CWE-1046: Creation of Immutable Text Using String Concatenation
 
@@ -66,15 +70,15 @@ It looks like there is lot of use of string concatenation in the page [WebModule
 
 ##### CWE-404: Improper Resource Shutdown or Release
 
-If we look at the code in the page [WebModuleUtil.java](https://github.com/openmrs/openmrs-core/blob/master/web/src/main/java/org/openmrs/module/web/WebModuleUtil.java) we can see closing code has been kept in try so when the exception occurs the resources doesn't get closed properly. so, try should be replaced with try-with-resources.
+If we look at the code in the page [WebModuleUtil.java](https://github.com/openmrs/openmrs-core/blob/master/web/src/main/java/org/openmrs/module/web/WebModuleUtil.java) we can see closing code has been kept in try so when the exception occurs the resources doesn't get closed properly. So, try should be replaced with `try-with-resources`.
 
 ##### CWE-1052: Excessive Use of Hard-Coded Literals in Initialization
 
-frequent use of hard-coded literals have been found in the [WebModuleUtil.java](https://github.com/openmrs/openmrs-core/blob/master/web/src/main/java/org/openmrs/module/web/WebModuleUtil.java) instead of defining a constant which seems to have CWE-1052 issue.
+The frequent use of hard-coded literals was found in the [WebModuleUtil.java](https://github.com/openmrs/openmrs-core/blob/master/web/src/main/java/org/openmrs/module/web/WebModuleUtil.java) instead of defining a constant which seems to have CWE-1052 issue.
 
 ##### CWE-149: Improper Neutralization of Quoting Syntax
 
-use of double quotes to use the indexOf(char) method in [moduleServlet.java](https://github.com/openmrs/openmrs-core/blob/master/web/src/main/java/org/openmrs/module/web/ModuleServlet.java) instate of single quote. Single quote around '/' helps use of indexOf(char) method faster. This improper use of quote seems to have CWE-149 issue.
+The use of double quotes when using the indexOf(char) method in [moduleServlet.java](https://github.com/openmrs/openmrs-core/blob/master/web/src/main/java/org/openmrs/module/web/ModuleServlet.java) instead of single quotes. Using single quotes around '/' has the potential to speed up the indexOf(char) method. This improper use of quote seems to have CWE-149 issue.
 
 
 ### Code Analysis for SSE - Findings from Automated Code Scanning (Task 3) 
@@ -102,7 +106,7 @@ Ideally we'd be able to simply provide a public link to the results of our autom
 
 When our initial automated analysis was run we were unaware of [SonarCloud](https://sonarcloud.io/about).  We've since gone back and checked and the `openMRS` codebase was scanned last year and the output / findings are similar to our own.
 
-That scan can be [found here](https://sonarcloud.io/dashboard?id=OMC).
+That scan can be **[found here](https://sonarcloud.io/dashboard?id=OMC)**.
 
 #### SonarQube Findings
 
@@ -185,7 +189,7 @@ The breakdown for the 150 bugs it found are listed below.
 
 ![SQ_Issues_Bugs_Overview](https://user-images.githubusercontent.com/5983684/69997180-2f4a8500-1519-11ea-8f69-cfc6ce4a4d76.PNG)
 
-Moreover, when looking at the specific file ModuleResourcesServlet.java in the web module we found 67 issues which directly affects the file upload. One of the major issue that implied here was nullable moduleId. Furtherover, if we look at the bugs in the web module two major bugs were encountered
+Moreover, when looking at the specific file `ModuleResourcesServlet.java` in the web module we found 67 issues which directly affects the file upload. One of the major issue that implied here was nullable moduleId. Furtherover, if we look at the bugs in the web module two major bugs were encountered
 
 ![sonarcube1](https://user-images.githubusercontent.com/41209887/70352387-a9884b80-1830-11ea-9cb1-a53e8bec27fa.JPG)
 
@@ -211,7 +215,7 @@ These issues are further categorized within specific areas or `Security Hotspots
 
 ![SQ_Measures_SecHotspot_Overview](https://user-images.githubusercontent.com/5983684/69997218-438e8200-1519-11ea-9719-821d7222c3ed.PNG)
 
-if we look at the specific file in OpenMRS i.e. openmrs/web/filter, we can see one security hotspot issue in the file StartupFilter.java which indicates us to make sure accessibility is safe.
+If we look at the specific file in OpenMRS i.e. openmrs/web/filter, we can see one security hotspot issue in the file `StartupFilter.java` which indicates us to make sure accessibility is safe.
 
 ![sonarcube6](https://user-images.githubusercontent.com/41209887/70353470-0a188800-1833-11ea-8178-2537a4eafd18.JPG)
 
@@ -256,13 +260,13 @@ There are two ways to use the SWAMP: the ready-to-use cloud computing platform a
   * Low: 5 
   * Info: 7 
 * Standards:
-  * CWE - 388: 7PK - Errors
+  * [CWE - 388: 7PK - Errors](https://cwe.mitre.org/data/definitions/388.html)
     * This category represents one of the phyla in the Seven Pernicious Kingdoms vulnerability classification. It includes weaknesses that occur when an application does not properly handle errors that occur during processing.
-  * CWE - 398: 7PK - Code Quality
+  * [CWE - 398: 7PK - Code Quality](https://cwe.mitre.org/data/definitions/398.html)
     * This checks that certain exception types do not appear in a `catch` statement.Catching overly broad exceptions promotes complex error handling code that is more likely to contain security vulnerabilities. Catching `java.lang.Exception`, `java.lang.Error` or `java.lang.RuntimeException` is almost never acceptable. Novice developers often simply catch Exception in an attempt to handle multiple exception classes. This unfortunately leads to code that inadvertently catches NullPointerException, OutOfMemoryError, etc.
-  * CWE - 399: Resource Management Errors
+  * [CWE - 399: Resource Management Errors](https://cwe.mitre.org/data/definitions/399.html)
     * This metric measures the number of instantiations of other classes within the given class. This type of coupling is not caused by inheritance or the object oriented paradigm. 
-  * CWE - 454: External Initializations of Trusted Variables
+  * [CWE - 454: External Initializations of Trusted Variables](https://cwe.mitre.org/data/definitions/454.html)
     * This checks that a class which has only private constructors is declared as final. The software initializes critical internal variables or data stores using inputs that can be modified by untrusted actors. A software system should be reluctant to trust variables that have been initialized outside of its trust boundary, especially if they are initialized by users. The variables may have been initialized incorrectly. If an attacker can initialize the variable, then they can influence what the vulnerable system will do.
   
   ---
@@ -282,15 +286,15 @@ There are two ways to use the SWAMP: the ready-to-use cloud computing platform a
   * Medium: 23 
   * Low: 56 
 * Standards:
-  * CWE - 22: Improper Limitation of a Pathname to a Restricted Directory
+  * [CWE - 22: Improper Limitation of a Pathname to a Restricted Directory](https://cwe.mitre.org/data/definitions/22.html)
     * A file is opened to read its content. The filename comes from an `input` parameter. If an unfiltered parameter is passed to this file API, files from an arbitrary filesystem location could be read. This rule identifies `potential` path traversal vulnerabilities. In many cases, the constructed file path cannot be controlled by the user. If that is the case, the reported instance is a false positive.
-  * CWE - 91: XML Injection
+  * [CWE - 91: XML Injection](https://cwe.mitre.org/data/definitions/91.html)
     * XML External Entity (XXE) attacks can occur when an XML parser supports XML entities while processing XML received from an untrusted source. The software processes an XML document that can contain XML entities with URIs that resolve to documents outside of the intended sphere of control, causing the product to embed incorrect documents into its output.
-  * CWE - 117: Improper Output Neutralization for Logs
+  * [CWE - 117: Improper Output Neutralization for Logs](https://cwe.mitre.org/data/definitions/117.html)
     * When data from an untrusted source is put into a logger and not neutralized correctly, an attacker could forge log entries or include malicious content. Inserted false entries could be used to skew statistics, distract the administrator or even to implicate another party in the commission of a malicious act. If the log file is processed automatically, the attacker can render the file unusable by corrupting the format of the file or injecting unexpected characters.
-  * CWE - 227: 7PK - API Abuse
+  * [CWE - 227: 7PK - API Abuse](https://cwe.mitre.org/data/definitions/227.html)
     * This Serializable class defines a non-primitive instance field which is neither transient, Serializable, or `java.lang.Object`, and does not appear to implement the `Externalizable` interface or the `readObject()` and `writeObject()` methods.  Objects of this class will not be deserialized correctly if a non-Serializable object is stored in this field.
-  * CWE - 252: Unchecked Return Value
+  * [CWE - 252: Unchecked Return Value](https://cwe.mitre.org/data/definitions/252.html)
     * This method returns a value that is not checked. The return value should be checked since it can indicate an unusual or unexpected function execution. For example, the `File.delete()` method returns false if the file could not be successfully deleted (rather than throwing an Exception). If you don't check the result, you won't notice if the method invocation signals unexpected behavior by returning an atypical return value.
   
 
