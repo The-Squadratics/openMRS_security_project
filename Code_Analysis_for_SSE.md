@@ -27,9 +27,10 @@ The team must produce a markdown report that includes the following:
 
 The OpenMRS core is written in Java.  The system itself has many components and is modular in the sense that it allows plug-ins to be written and used for functionality that might not be incorporated in the core or that doesn't cover a specific use case.  These plug-ins are could potentially be written in another language but would still need to interact with the core API which is, again, based on Java and uses the Spring framework.  The [developer guide](https://wiki.openmrs.org/display/docs/Developer+Guide) the project hosts recommends using Eclipse and Maven when writing plug-ins and has suggestions and guides to help folks get started.
 
-Given the size and scope of this project a full manual review isn't feasible.  Our initial strategy will focus on using an automated tool to conduct the bulk of the code analysis.  There are a couple specific parts of the system that we have reviewed for other steps in this project, notably the Web Utils and Web Filter.  Those team members familiar with Java will spend some time manually reviewing those specific aspects and report back on what, if anything, they found.
+Given the size and scope of this project a full manual review isn't feasible. For the code review of OpenMRS, we decided to use both an automated and manual analysis approach. Our initial strategy will focus on using an automated tool to conduct the bulk of the code analysis. There are a couple specific parts of the system that we have reviewed for other steps in this project, notably the Web Utils and Web Filter. Those team members familiar with Java will spend some time manually reviewing those specific aspects and report back on what, if anything, they found.
+ 
+We adopted Scenario-based strategy. We utilized our previously created Assurance cases and Misuse cases to identify data flows and potentially vulnerable areas of the OpenMRS in Web Utils folder as well as Web Filter folder by doing a manual code review. We spent time researching the analysis tools available for Java and found many options.  Most of them are commercial packages, though, which put them out of reach.  One package that looked promising was by [SonarQube](https://www.sonarqube.org). They offer both a commercial package but also have an open source (`Community`) version that should meet our need. For the initial automated testing, we've chosen to use OpenMRS core package for our code analysis.  If it doesn't work or the reported findings seem lacking we will try another option such as [FindBugs](https://github.com/findbugsproject/findbugs) or [PMD](https://pmd.github.io). The  other testing tool we used for code review of Web Utilities was [SWAMP](https://continuousassurance.org/). The SWAMP is a publicly available, open source, no-cost service for continuous software assurance and static code analysis. These tools were mainly used to identify potential security concerns and general flaws with the source code that could cause problems with the software. Both the automated and manual code review process was focused on finding potential security flaws based on the requirements that we have outlined in our misuse cases, assurance cases, and threat models.
 
-We adopted Scenario-based strategy. We utilized our previously created Assurance cases and Misuse cases to identify data flows and potentially vulnerable areas of the OpenMRS in Web Utils folder as well as Web Filter folder by doing a manual code review. We spent time researching the analysis tools available for Java and found many options.  Most of them are commercial packages, though, which put them out of reach.  One package that looked promising was by [SonarQube](https://www.sonarqube.org). They offer both a commercial package but also have an open source (`Community`) version that should meet our need. For the initial automated testing, we've chosen to use OpenMRS core package for our code analysis.  If it doesn't work or the reported findings seem lacking we will try another option such as [FindBugs](https://github.com/findbugsproject/findbugs) or [PMD](https://pmd.github.io). The  other testing tool we used for code review of Web Utilities was [DHS SWAMP](https://continuousassurance.org/). The SWAMP is a publicly available, open source, no-cost service for continuous software assurance and static code analysis. 
 
 
 ### Code Analysis for SSE - Findings from Manual Code Review (Task 2) 
@@ -228,9 +229,18 @@ The code duplication was at `2.7%` with only `197` duplicate blocks. We're not s
 
 ![SQ_Measures_Dupe_Overview](https://user-images.githubusercontent.com/5983684/69997251-5608bb80-1519-11ea-88d7-dbd7b3c92d73.PNG)
 
-----
-
 Overall `SonarQube` appears to be a valuable resource for most any development team.  It provides a wealth of information about the codebase, straightforward ways to classify and view that information, as well as tools for managing and iterating on the fixes necessary to improve it.
+
+---
+
+#### SWAMP - Overview
+
+The [SWAMP](https://continuousassurance.org) is a publicly available, open source, no-cost service for continuous software assurance and static code analysis. The Software Assurance Marketplace (SWAMP) is an open, no-cost, high-performance computing platform designed to serve as a resource to the software community. Created to advance the state of cybersecurity, protect critical infrastructures, and improve the resilience of open-source software (applications, libraries, etc.), the ultimate goal of the SWAMP is to provide higher quality and more secure software for government agencies, businesses, academia, and end users. The SWAMP was developed to lower the barriers for software and tool developers, researchers, and educators/students (Audience/User Groups) to do continuous software assurance. By offering multiple software analysis tools and a library of software applications with known vulnerabilities, the SWAMP is committed to making it easier to integrate security into the software development life cycle.
+
+There are two ways to use the SWAMP: the ready-to-use cloud computing platform at mir-swamp.org and the SWAMP-in-a-Box (SiB) open-source distribution downloadable from GitHub.
+
+#### SWAMP - Findings
+
 
 
 ### Code Analysis for SSE - Summary of Key Findings from the Code Reviews (Task 4) 
