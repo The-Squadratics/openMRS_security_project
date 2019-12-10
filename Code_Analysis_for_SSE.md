@@ -355,7 +355,37 @@ Even though there were only a couple instances of the last item listed, CWE-327,
 ### Code Analysis for SSE - Documentation of any contact had with the OSS project (Task 5) 
 ---
 
-Currently there has been no direct contact with the OpenMRS team or personnel. All of our findings have been from reviewing the GitHub codebase and the various documentation on their wiki. We hope to create pull requests with our findings soon.
+Currently there has been no direct contact with the OpenMRS team or personnel. All of our findings have been from reviewing the GitHub codebase and the various documentation on their wiki.
+
+While we haven't done so yet, we do intend to communicate a few specific suggestions back to the OpenMRS project. We don't want this to come across as a series of excuses, but did want to talk about the contribution process, things which impacted our ability to contribute.
+
+We also found it interesting because much of what we learned this semester seems like it would be really hard to do in open source. Given the distributed nature of the work and shifting development team and so on. Versus working through these things in a company with dedicated team and resources and what not.
+
+This project does have many, many areas to which a group or individual could contribute. We were probably too focused on weaknesses and the security aspects of the project, which were some of the more complex areas. Not fully understanding how these portions worked or were implemented made it difficult to determine whether something flagged by SWAMP or SonarQube was indeed an issue given the context in which it was used.  Which that was challenging.
+
+----
+
+In addition, the codebase was quite large. (as covered above) We were working with the core API which was only 75k lines but there were many other parts that relied on it.
+There are more than 200 individual repositories under OpenMRS which, again, makes it challenging to know how things are connected.
+
+----
+
+Communicating with the folks on the `openMRS` project is not terribly straightforward.  It requires multiple accounts on multiple different platforms.  The code lives on GitHub.  The issues are tracked using Jira.  The wiki uses Confluence while the discussion boards were separate.  They also have Slack and IRC channels.  All of which made it more difficult, not less, to know where and how to contact folks.
+
+----
+
+Having said all that, the following items are the issues we think need to be investigated further.
+
+First and foremost, simply adding in a tool like SWAMP or SonarQube into the pipeline could be a great help to teams that might not know where to start when it comes to software assurance.
+
+Otherwise, there are three main issues:
+* The potential use of hard coded credentials which raise authentication issues.
+* The potential use of broken cryptographic algorithm which could endanger the transfer of data.
+* Improper closure of system resources which could lead to denial of service attacks.
+
+[CWE-798 - Use of Hard-coded Credentials](https://cwe.mitre.org/data/definitions/798.html)
+[CWE-327 - Use of Broken or Risky Cryptographic Algorithm](https://cwe.mitre.org/data/definitions/327.html)
+[CWE-459 - Incomplete Cleanup](https://cwe.mitre.org/data/definitions/459.html)
 
 
 ### Team Retrospective (Task 6)
