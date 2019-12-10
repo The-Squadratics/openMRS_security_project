@@ -383,9 +383,9 @@ Otherwise, there are three main issues:
 * The potential use of broken cryptographic algorithm which could endanger the transfer of data.
 * Improper closure of system resources which could lead to denial of service attacks.
 
-[CWE-798 - Use of Hard-coded Credentials](https://cwe.mitre.org/data/definitions/798.html)
-[CWE-327 - Use of Broken or Risky Cryptographic Algorithm](https://cwe.mitre.org/data/definitions/327.html)
-[CWE-459 - Incomplete Cleanup](https://cwe.mitre.org/data/definitions/459.html)
+[CWE-798 - Use of Hard-coded Credentials](https://cwe.mitre.org/data/definitions/798.html)  
+[CWE-327 - Use of Broken or Risky Cryptographic Algorithm](https://cwe.mitre.org/data/definitions/327.html)  
+[CWE-459 - Incomplete Cleanup](https://cwe.mitre.org/data/definitions/459.html)  
 
 
 ### Team Retrospective (Task 6)
